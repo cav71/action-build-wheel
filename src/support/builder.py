@@ -20,15 +20,23 @@ import shutil
 import subprocess
 import sys
 import textwrap
+import tomllib
 import urllib.error
 import urllib.request
 from collections.abc import Callable, Generator
-from enum import StrEnum, auto
+from enum import auto
 from pathlib import Path
 from types import SimpleNamespace
 from typing import Any, TypedDict
 
-import tomllib
+try:
+    from enum import StrEnum
+except ImportError:
+    from enum import Enum
+
+    class StrEnum(str, Enum):
+        pass
+
 
 log = logging.getLogger(__name__)
 
