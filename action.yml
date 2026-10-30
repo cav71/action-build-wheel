@@ -36,6 +36,12 @@ runs:
     - name: Checkout build-wheel code
       uses: actions/checkout@v7
 
+    - name: Internal check
+      if: ${{ inputs.debug == true }} 
+      shell: bash
+      run: |
+        PYTHONPATH=${{ github.action_path }}/src python -m support.info
+
     - name: Run build-wheel code
       env:
         GITHUB_DUMP: |
