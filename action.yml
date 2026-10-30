@@ -4,9 +4,14 @@ author: GitHub Actions
 
 # Define your inputs here.
 inputs:
+  python:
+    description: Configure the python command
+    required: false
+    default: python
+
   mode:
     description: What kind of package to build
-    required:
+    required: true
     type: choice
     options:
       - beta
@@ -37,10 +42,10 @@ runs:
       uses: actions/checkout@v7
 
     - name: Internal check
-      if: ${{ inputs.debug == true }} 
+      if: ${{ inputs.debug }}
       shell: bash
       run: |
-        PYTHONPATH=${{ github.action_path }}/src python -m support.info
+        PYTHONPATH=${{ github.action_path }}/src ${{ inputs.python }} -m support.info
 
     - name: Run build-wheel code
       env:
@@ -62,7 +67,7 @@ runs:
           }
       shell: bash
       run: |
-        PYTHONPATH=${{ github.action_path }}/src python -m support.builder "${{ inputs.mode }}" ${{ inputs.files }}
+        PYTHONPATH=${{ github.action_path }}/src ${{ inputs.python } -m support.builder "${{ inputs.mode }}" ${{ inputs.files }}
     
 #    - name: Set output
 #      shell: bash
