@@ -17,7 +17,12 @@ outputs:
 runs:
   using: composite
   steps:
-    - name: Run hello.py
+
+    # https://github.com/actions/checkout
+    - name: Checkout build wheel code
+      uses: actions/checkout@v7
+
+    - name: Run build wheel code
       shell: bash
       run: |
         python src/hello.py --name "${{ inputs.who-to-greet }}"
