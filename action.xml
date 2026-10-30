@@ -1,0 +1,33 @@
+name: Hello, World!
+description: Greet someone and record the time
+author: GitHub Actions
+
+# Define your inputs here.
+inputs:
+  who-to-greet:
+    description: Who to greet
+    required: true
+    default: World
+
+# Define your outputs here.
+outputs:
+  time:
+    description: The time we greeted you
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+    
+    - name: Run hello.py
+      shell: bash
+      run: |
+        python src/hello.py --name "${{ inputs.who-to-greet }}"
+    
+    - name: Set output
+      shell: bash
+      run: |
+        echo "time=$(date)" >> $GITHUB_OUTPUT
