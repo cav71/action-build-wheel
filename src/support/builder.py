@@ -53,7 +53,6 @@ class Pyproject(TypedDict):
 
 
 class ReleaseMode(StrEnum):
-    UNDEFINED = auto()
     BETA = auto()
     RELEASE = auto()
     POST = auto()

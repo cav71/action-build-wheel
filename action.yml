@@ -4,6 +4,16 @@ author: GitHub Actions
 
 # Define your inputs here.
 inputs:
+  mode:
+    description: What kind of package to build
+    required:
+    type: choice
+    options:
+      - beta
+      - release
+      - post
+    default: release
+    
   files:
     description: Files to apply @VAR@ replacement
     required: false
@@ -24,8 +34,7 @@ runs:
     - name: Run build-wheel code
       shell: bash
       run: |
-        PYTHONPATH=${{ github.action_path }}/src python -m support.info
-#--name "${{ inputs.who-to-greet }}"
+        PYTHONPATH=${{ github.action_path }}/src python -m support.builder "${{ inputs.mode }}" ${{ inputs.files }}
     
     - name: Set output
       shell: bash
