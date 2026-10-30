@@ -4,31 +4,30 @@ author: GitHub Actions
 
 # Define your inputs here.
 inputs:
-  who-to-greet:
-    description: Who to greet
-    required: true
-    default: World
+  files:
+    description: Files to apply @VAR@ replacement
+    required: false
 
 # Define your outputs here.
 outputs:
-  time:
-    description: The time we greeted you
+  python_wheel:
+    description: The path to the wheel file
 
 runs:
   using: composite
   steps:
 
     # https://github.com/actions/checkout
-    - name: Checkout build wheel code
+    - name: Checkout build-wheel code
       uses: actions/checkout@v7
 
-    - name: Run build wheel code
+    - name: Run build-wheel code
       shell: bash
       run: |
-        tree ${{ github.action_path }}
-        python  ${{ github.action_path }}/src/hello.py --name "${{ inputs.who-to-greet }}"
+        PYTHONPATH=${{ github.action_path }}/src python -m support.info
+#--name "${{ inputs.who-to-greet }}"
     
     - name: Set output
       shell: bash
       run: |
-        echo "time=$(date)" >> $GITHUB_OUTPUT
+        echo "python_wheel=$(date)" >> $GITHUB_OUTPUT

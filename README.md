@@ -1,13 +1,13 @@
-# Hello World GitHub Action
+# Build a python wheel, using template substitution
 
-A simple GitHub Action that greets someone and records the time. This action demonstrates how to create a basic composite action that runs a Python script.
+A simple GitHub Action that build a wheel, in a controlled way.
 
 ## Features
 
-- ✅ Greets a specified person or defaults to "World"
-- ✅ Records the current time as an output
-- ✅ Simple Python-based implementation
-- ✅ Easy to integrate into your workflows
+- ✅ get values from the environment
+- ✅ replace from a list of files the @VAR@ with them
+- ✅ build the wheel file
+
 
 ## Usage
 
@@ -30,16 +30,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
-      - name: Run Hello World Action
-        uses: ./
-        id: hello
-        with:
-          who-to-greet: 'GitHub User'
+      - name: Setup Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v7
 
-      - name: Display greeting time
-        run: echo "Greeted at ${{ steps.hello.outputs.time }}"
+      - name: Create python wheel
+        uses: cav71/action-build-wheel@v1
+
+      - name: Display generated wheel
+        run: echo "Built wheel ${{ steps.hello.outputs.python_wheel }}"
 ```
 
 ### Using in Another Repository
