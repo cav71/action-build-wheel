@@ -25,6 +25,8 @@ runs:
     - name: Run build wheel code
       shell: bash
       run: |
+        find .
+        tree
         python src/hello.py --name "${{ inputs.who-to-greet }}"
     
     - name: Set output
