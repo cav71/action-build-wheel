@@ -67,7 +67,7 @@ runs:
           }
       shell: bash
       run: |
-        PYTHONPATH=${{ github.action_path }}/src ${{ inputs.python } -m support.builder "${{ inputs.mode }}" ${{ inputs.files }}
+        PYTHONPATH=${{ github.action_path }}/src ${{ inputs.python }} -m support.builder "${{ inputs.mode }}" ${{ inputs.files }}
     
 #    - name: Set output
 #      shell: bash
