@@ -71,6 +71,9 @@ class ReleaseMode(StrEnum):
     TRANS = auto()
 
 
+MODES = [str(t).lower().rpartition(".")[2] for t in ReleaseMode]
+
+
 @dc.dataclass
 class Runner:
     exe: list[str] | None = None
@@ -411,7 +414,9 @@ def parse_arguments():
     parser.add_argument("--gitdump", type=Path)
 
     parser.add_argument(
-        "mode", choices=list(map(str, ReleaseMode)), type=lambda t: t.partition("/")[0]
+        "mode",
+        choices=MODES,
+        type=lambda t: t.partition("/")[0],
     )
     parser.add_argument("paths", nargs="*", type=lambda p: relative_to(Path(p)))
     args = parser.parse_args()
