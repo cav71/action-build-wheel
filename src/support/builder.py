@@ -36,10 +36,18 @@ from typing import Any, TypedDict
 try:
     from enum import StrEnum
 except ImportError:
-    from enum import Enum
+    from enum import ReprEnum
 
-    class StrEnum(str, Enum):
-        pass
+    class StrEnum(str, ReprEnum):
+        def __new__(cls, *values):
+            value = str(*values)
+            member = str.__new__(cls, value)
+            member._value_ = value
+            return member
+
+        @staticmethod
+        def _generate_next_value_(name, start, count, last_values):
+            return name.lower()
 
 
 log = logging.getLogger(__name__)
