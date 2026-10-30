@@ -18,6 +18,11 @@ inputs:
     description: Files to apply @VAR@ replacement
     required: false
 
+  debug:
+    description: Dumps data
+    required: false
+    default: false
+
 # Define your outputs here.
 outputs:
   python_wheel:
@@ -32,11 +37,28 @@ runs:
       uses: actions/checkout@v7
 
     - name: Run build-wheel code
+      env:
+        GITHUB_DUMP: |
+          {
+            "event": {
+              "repository": {
+                "name": "${{ github.event.repository.name }}",
+                "default_branch": "${{ github.event.repository.default_branch }}",
+                "html_url": "${{ github.event.repository.html_url }}"
+              }
+            },
+            "ref": "${{ github.ref }}",
+            "sha": "${{ github.sha }}",
+            "run_number": "${{ github.run_number }}",
+            "ref_name": "${{ github.ref_name }}",
+            "repository": "${{ github.repository }}",
+            "workflow_ref": "${{ github.workflow_ref }}"
+          }
       shell: bash
       run: |
         PYTHONPATH=${{ github.action_path }}/src python -m support.builder "${{ inputs.mode }}" ${{ inputs.files }}
     
-    - name: Set output
-      shell: bash
-      run: |
-        echo "python_wheel=$(date)" >> $GITHUB_OUTPUT
+#    - name: Set output
+#      shell: bash
+#      run: |
+#        echo "python_wheel=$(date)" >> $GITHUB_OUTPUT
