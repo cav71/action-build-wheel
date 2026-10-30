@@ -36,9 +36,9 @@ from typing import Any, TypedDict
 try:
     from enum import StrEnum
 except ImportError:
-    from enum import ReprEnum
+    from enum import Enum
 
-    class StrEnum(str, ReprEnum):
+    class StrEnum(str, Enum):
         def __new__(cls, *values):
             value = str(*values)
             member = str.__new__(cls, value)
