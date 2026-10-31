@@ -7,7 +7,7 @@ inputs:
   python:
     description: Configure the python command
     required: false
-    default: python
+    default: 'uv run --no-managed-python python'
 
   mode:
     description: What kind of package to build
