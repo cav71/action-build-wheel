@@ -1,22 +1,23 @@
-# Build a python wheel, using template substitution
+# Build a Python Wheel with Template Substitution
 
-A simple GitHub Action that build a wheel, in a controlled way.
+A GitHub Action that builds a Python wheel, applying template substitution to replace `@VAR@` placeholders with values from the environment.
 
 ## Features
 
-- ✅ get values from the environment
-- ✅ replace from a list of files the @VAR@ with them
-- ✅ build the wheel file
-
+- ✅ Get values from the GitHub Actions environment
+- ✅ Replace `@VAR@` placeholders in specified files with environment values
+- ✅ Build the wheel file
+- ✅ Support for different build modes (beta, release, post)
+- ✅ Debug mode for troubleshooting
 
 ## Usage
 
 ### Basic Usage
 
-Create a workflow file (e.g., `.github/workflows/hello.yml`) in your repository:
+Create a workflow file (e.g., `.github/workflows/build.yml`) in your repository:
 
 ```yaml
-name: Hello World
+name: Build Python Wheel
 
 on:
   push:
@@ -26,20 +27,25 @@ on:
   workflow_dispatch:
 
 jobs:
-  greet:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
 
-      - name: Setup Python ${{ matrix.python-version }}
+      - name: Setup Python
         uses: actions/setup-python@v7
+        with:
+          python-version: '3.x'
 
-      - name: Create python wheel
+      - name: Build wheel
         uses: cav71/action-build-wheel@v1
+        id: build
+        with:
+          mode: release
 
       - name: Display generated wheel
-        run: echo "Built wheel ${{ steps.hello.outputs.python_wheel }}"
+        run: echo "Built wheel: ${{ steps.build.outputs.python_wheel }}"
 ```
 
 ### Using in Another Repository
@@ -47,73 +53,121 @@ jobs:
 To use this action from another repository:
 
 ```yaml
-- name: Run Hello World Action
-  uses: your-username/your-repo@v1
-  id: hello
+- name: Build Python wheel
+  uses: cav71/action-build-wheel@v1
+  id: build
   with:
-    who-to-greet: 'Your Name'
+    mode: release
+    files: "setup.py pyproject.toml"
 ```
 
-### Custom Greeting
+### Build Modes
 
-You can customize who to greet:
+The action supports three build modes:
+
+- **beta**: Build a beta version of the wheel
+- **release**: Build a release version (default)
+- **post**: Build a post-release version
 
 ```yaml
-- name: Greet specific person
-  uses: ./
+- name: Build beta wheel
+  uses: cav71/action-build-wheel@v1
   with:
-    who-to-greet: 'Alice'
+    mode: beta
+```
+
+### Custom Python Command
+
+You can specify a custom Python command:
+
+```yaml
+- name: Build wheel with custom Python
+  uses: cav71/action-build-wheel@v1
+  with:
+    python: python3.11
+    mode: release
+```
+
+### File Template Substitution
+
+Specify which files should have `@VAR@` placeholders replaced:
+
+```yaml
+- name: Build wheel with template substitution
+  uses: cav71/action-build-wheel@v1
+  with:
+    mode: release
+    files: "setup.py src/__version__.py"
+```
+
+### Debug Mode
+
+Enable debug mode to dump environment information:
+
+```yaml
+- name: Build wheel with debug
+  uses: cav71/action-build-wheel@v1
+  with:
+    mode: release
+    debug: true
 ```
 
 ## Inputs
 
 | Input | Description | Required | Default |
 |-------|-------------|----------|---------|
-| `who-to-greet` | The name of the person to greet | Yes | `World` |
+| `python` | Configure the python command | No | `python` |
+| `mode` | What kind of package to build (beta, release, post) | Yes | `release` |
+| `files` | Files to apply `@VAR@` replacement | No | `` |
+| `debug` | Dumps debug data | No | `false` |
 
 ## Outputs
 
 | Output | Description |
 |--------|-------------|
-| `time` | The timestamp when the greeting occurred |
+| `python_wheel` | The path to the generated wheel file |
 
 ## Example Workflow with Output
 
 ```yaml
-name: Greet and Log
+name: Build and Upload Wheel
 
-on: [push]
+on:
+  push:
+    tags:
+      - 'v*'
 
 jobs:
-  greet:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
-      - name: Greet
-        uses: ./
-        id: greeting
+      - name: Setup Python
+        uses: actions/setup-python@v7
         with:
-          who-to-greet: 'Developer'
+          python-version: '3.x'
 
-      - name: Show greeting info
-        run: |
-          echo "Greeted: ${{ inputs.who-to-greet }}"
-          echo "Time: ${{ steps.greeting.outputs.time }}"
+      - name: Build wheel
+        uses: cav71/action-build-wheel@v1
+        id: build
+        with:
+          mode: release
+          files: "setup.py"
+
+      - name: Upload wheel
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-wheel
+          path: ${{ steps.build.outputs.python_wheel }}
 ```
 
-## Local Testing
+## Environment Variables
 
-To test the Python script locally:
+The action automatically injects GitHub context information as environment variables, which can be used for template substitution:
 
-```bash
-# Run with default name (World)
-python src/hello.py
-
-# Run with custom name
-python src/hello.py --name "Your Name"
-```
+- `GITHUB_DUMP`: JSON containing repository information, ref, sha, run number, etc.
 
 ## Project Structure
 
@@ -121,7 +175,11 @@ python src/hello.py --name "Your Name"
 action-build-wheel/
 ├── action.yml          # Action configuration
 ├── src/
-│   └── hello.py        # Python script that does the greeting
+│   └── support/
+│       ├── __init__.py
+│       ├── builder.py  # Main build logic
+│       ├── info.py     # Debug information
+│       └── ureporting.py
 ├── README.md           # This file
 └── .github/
     └── workflows/
