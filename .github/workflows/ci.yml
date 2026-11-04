@@ -49,5 +49,6 @@ jobs:
       #  run: uv run mypy --no-incremental src tests
     
       - name: Run Python checks (tests)
+        shell: bash
         run: PYTHONPATH=src uv run pytest -vvs -l tests
 
