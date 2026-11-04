@@ -1,11 +1,23 @@
 # Build a Python Wheel with Template Substitution
 
-A GitHub Action that builds a Python wheel, applying template substitution to replace `@VAR@` placeholders with values from the environment.
+A GitHub Action that builds a Python wheel with some magic:
+
+- applying template substitution to replace `@VAR@` placeholders with values from the environment.
+- depending on the "mode" (release, beta, or post) it will build "tagget" wheels (eg. blah-1.0.0, blah-1.0.0b12, or blah-1.0.0post99)
+
+The pre-defined variables for substitution are (@variable@ -> value):
+- **actionlink** github relative url to the branch (eg. <owner>/<project>/main.yml?branch=main) 
+- **actionurl** github workflow file name (eg. main.yml?branch=main)
+- **branch** current branch
+- **mode** eg. release, beta, or post
+- **sha** full sha commit (eg. e36aebe19b7caadefbed28935f162fb51b37cda4)
+- **sha7** short sha commit (eg. e36aebe)
+- **version** project version (eg. blah-1.0.0, blah-1.0.0b12, or blah-1.0.0post99)
 
 ## Features
 
 - ✅ Get values from the GitHub Actions environment
-- ✅ Replace `@VAR@` placeholders in specified files with environment values
+- ✅ Replace `@variable@` placeholders in specified files with environment values
 - ✅ Build the wheel file
 - ✅ Support for different build modes (beta, release, post)
 - ✅ Debug mode for troubleshooting
@@ -33,7 +45,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
 
-      - name: Setup Python
+      - name: Install Python
         uses: actions/setup-python@v7
         with:
           python-version: '3.x'
