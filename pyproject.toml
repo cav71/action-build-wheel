@@ -1,0 +1,41 @@
+[project]
+name = "support"
+version = "0.0.0"
+description = "A githib action to crate wheel packages"
+readme = "README.md"
+
+authors = [
+    { name = "A. Cavallo", email = "a.cavallo@cavallinux.eu" },
+]
+
+license = "BSD-3-Clause"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+]
+
+requires-python = ">=3.8"
+dependencies = [
+]
+
+[dependency-groups]
+dev = [                         # generally useful during development
+    "mypy",
+    "pre-commit",
+    "pytest",
+    "rufF",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

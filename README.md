@@ -65,9 +65,9 @@ To use this action from another repository:
 
 The action supports three build modes:
 
-- **beta**: Build a beta version of the wheel
-- **release**: Build a release version (default)
-- **post**: Build a post-release version
+- **beta**: Build a beta version of the wheel (eg. blah-0.1.2b12)
+- **release**: Build a release version (default, eg. blah-0.1.2)
+- **post**: Build a post-release version (eg. blah-0.1.2post11)
 
 ```yaml
 - name: Build beta wheel

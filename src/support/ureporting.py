@@ -76,7 +76,7 @@ def dumps(report: list[Record], sorted_groups: bool = True) -> str:
 
     for group in list({r.group: 1 for r in report}):
         records = [r for r in report if r.group == group]
-        status = resolve(set(record.status for record in records))
+        status = resolve({record.status for record in records})
         result.append(f"{color(status)} {group}")
         start = " " * 4 + " " * width
         for record in sorted(records, key=lambda r: r.index):
@@ -88,7 +88,7 @@ def dumps(report: list[Record], sorted_groups: bool = True) -> str:
                 items = record.report
                 message = indent("\n".join(items), pre=start).lstrip()
             else:
-                raise RuntimeError("unable to handle type", type(record.report))
+                raise TypeError("unable to handle type", type(record.report))
             result.append(f"{pre}{colorize(record.key, record.status):{width}} {message}")
 
     return "\n".join(result)
@@ -121,7 +121,7 @@ def check(fn):
 
 
 def load_external_checks(paths: Sequence[str | Path]) -> list[Record]:
-    from acbox.utils import loadmod
+    from .utils import loadmod
 
     result = []
     for path in paths:

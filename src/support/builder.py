@@ -1,10 +1,3 @@
-#!/usr/bin/env python
-# /// script
-# requires-python = ">=3.13"
-# dependencies = [
-#   "build",
-# ]
-# ///
 from __future__ import annotations
 
 import argparse
@@ -91,9 +84,7 @@ class Runner:
         verbose = self.verbose if verbose is None else verbose
         cmd = [str(c) for c in [*(self.exe or []), *args]]
         if capture:
-            return subprocess.check_output(
-                cmd, encoding="utf-8", stderr=None if verbose else subprocess.DEVNULL
-            )
+            return subprocess.check_output(cmd, encoding="utf-8", stderr=None if verbose else subprocess.DEVNULL)
         return subprocess.check_call(
             cmd,
             encoding="utf-8",
@@ -116,9 +107,7 @@ class Git:
 
     def default(self):
         return (
-            self.runner(
-                ["symbolic-ref", "refs/remotes/origin/HEAD", "--short"], capture=True
-            )
+            self.runner(["symbolic-ref", "refs/remotes/origin/HEAD", "--short"], capture=True)
             .strip()
             .rpartition("/")[2]
             .rpartition("/")[2]
@@ -266,9 +255,7 @@ def get_gdata(
     log.debug("got sha '%s'", sha)
 
     branch = rget(gitdump, "ref") or (git and git.branch())
-    default_branch = rget(gitdump, "event.repository.default_branch") or (
-        git and git.default()
-    )
+    default_branch = rget(gitdump, "event.repository.default_branch") or (git and git.default())
     log.debug("got branch '%s' (default %s)", branch, default_branch)
 
     if not (branch and default_branch):
@@ -309,9 +296,7 @@ def pypi_fetch_data(name):
         return None
 
 
-def pypi_parse_releases(
-    name: str, data: dict[str, Any] | None = None
-) -> Releases | None:
+def pypi_parse_releases(name: str, data: dict[str, Any] | None = None) -> Releases | None:
     if not (data := data or pypi_fetch_data(name)):
         return None
     exprs = {
@@ -396,12 +381,8 @@ def parse_arguments():
     parser = argparse.ArgumentParser()
 
     group = parser.add_mutually_exclusive_group()
-    group.add_argument(
-        "-v", "--verbose", dest="loglevel", action="append_const", const=1
-    )
-    group.add_argument(
-        "-q", "--quiet", dest="loglevel", action="append_const", const=-1
-    )
+    group.add_argument("-v", "--verbose", dest="loglevel", action="append_const", const=1)
+    group.add_argument("-q", "--quiet", dest="loglevel", action="append_const", const=-1)
     parser.add_argument("-n", "--dry-run", dest="dryrun", action="store_true")
     parser.add_argument("-c", "--cache", type=Path)
     parser.add_argument("--dump", action="store_true")
@@ -437,9 +418,7 @@ def parse_arguments():
 
     # LOG
     args.loglevel = max(min(sum(args.loglevel or [0]), 1), -1)
-    logging.basicConfig(
-        level={-1: logging.WARNING, 0: logging.INFO, 1: logging.DEBUG}[args.loglevel]
-    )
+    logging.basicConfig(level={-1: logging.WARNING, 0: logging.INFO, 1: logging.DEBUG}[args.loglevel])
 
     # PYPROJECT
     args.pyprojectpath = relative_to(args.pyproject.resolve())
@@ -533,9 +512,7 @@ def main() -> None:
         log.debug("fixing %s", args.pyprojectpath)
         save(args.pyprojectpath)
         lines = args.pyprojectpath.read_text().split("\n")
-        lineno = next(
-            i for i, line in enumerate(lines) if re.search(r"^\s*version\s*=", line)
-        )
+        lineno = next(i for i, line in enumerate(lines) if re.search(r"^\s*version\s*=", line))
         lines[lineno] = f'version = "{gdata.version_string()}"'
         args.pyprojectpath.write_text("\n".join(lines))
 
@@ -549,9 +526,7 @@ def main() -> None:
         # building wheel
         log.info("building wheel package in %s", args.pyprojectpath.parent)
         if not args.dryrun:
-            runc(
-                [sys.executable, "-m", "build", args.pyprojectpath.parent], verbose=True
-            )
+            runc([sys.executable, "-m", "build", args.pyprojectpath.parent], verbose=True)
 
 
 if __name__ == "__main__":

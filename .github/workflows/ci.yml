@@ -1,0 +1,52 @@
+name: Build Python Wheel
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12", "3.13", "3.14"]
+    runs-on: ${{ matrix.os }}
+
+      # https://github.com/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          # WARNING!! this is important
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      # https://github.com/actions/setup-python
+      - name: Install Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      # https://github.com/astral-sh/setup-uv
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10.0.1
+
+      - name: Create venv
+        shell: bash
+        run: |
+          uv sync --no-managed-python
+
+      - name: Run Python checks (ruff+format)
+        run: uv run ruff format --exit-non-zero-on-format src tests
+
+      - name: Run Python checks (ruff+check)
+        run: uv run ruff check --fix --exit-non-zero-on-fix --show-fixes src tests
+
+      #- name: Run Python checks (mypy)
+      #  run: uv run mypy --no-incremental src tests
+    
+      - name: Run Python checks (tests)
+        run: uv run pytest -vvs -l tests
+
