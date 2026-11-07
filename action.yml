@@ -79,6 +79,7 @@ runs:
       if: ${{ inputs.move }}
       shell: bash
       run: |
+        mkdir -p ${{ inputs.move }}
         mv dist ${{ inputs.move }}
         
     
