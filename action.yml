@@ -23,6 +23,11 @@ inputs:
     description: Files to apply @VAR@ replacement
     required: false
 
+  move:
+    description: move the dist directory after build
+    required: false
+    default: ""
+
   debug:
     description: Dumps data
     required: false
@@ -69,6 +74,14 @@ runs:
       run: |
         FILES=$(echo "${{ inputs.files }}" | tr '\n' ' ')
         PYTHONPATH=${{ github.action_path }}/src ${{ inputs.python }} -m support.builder ${{ inputs.mode }} $FILES
+
+    - name: Run build-wheel code
+      if: ${{ inputs.move }}
+      shell: bash
+      run: |
+        mv dist ${{ inputs.move }}
+        
+    
     
 #    - name: Set output
 #      shell: bash
