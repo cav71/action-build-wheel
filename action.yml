@@ -49,8 +49,10 @@ runs:
     - name: Internal check
       if: ${{ inputs.debug }}
       shell: bash
+      env:
+        PYTHONPATH: ${{ github.action_path }}/src
       run: |
-        PYTHONPATH=${{ github.action_path }}/src ${{ inputs.python }} -m action_build_wheel_support.info
+        ${{ inputs.python }} -m action_build_wheel_support.info
 
     - name: Run build-wheel code
       env:
@@ -71,9 +73,11 @@ runs:
             "workflow_ref": "${{ github.workflow_ref }}"
           }
       shell: bash
+      env:
+        PYTHONPATH: ${{ github.action_path }}/src
       run: |
         FILES=$(echo "${{ inputs.files }}" | tr '\n' ' ')
-        PYTHONPATH=${{ github.action_path }}/src ${{ inputs.python }} -m action_build_wheel_support.builder ${{ inputs.mode }} $FILES
+        ${{ inputs.python }} -m action_build_wheel_support.builder ${{ inputs.mode }} $FILES
 
     - name: Run build-wheel code
       if: ${{ inputs.move }}
