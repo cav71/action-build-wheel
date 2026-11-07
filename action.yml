@@ -78,7 +78,7 @@ runs:
         FILES=$(echo "${{ inputs.files }}" | tr '\n' ' ')
         ${{ inputs.python }} -m action_build_wheel_support.builder ${{ inputs.mode }} $FILES
 
-    - name: Run build-wheel code
+    - name: Move built data to ${{ inputs.move }}
       if: ${{ inputs.move }}
       shell: bash
       run: |
