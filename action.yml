@@ -41,11 +41,6 @@ outputs:
 runs:
   using: composite
   steps:
-
-    # https://github.com/actions/checkout
-    - name: Checkout build-wheel code
-      uses: actions/checkout@v7
-
     - name: Internal check
       if: ${{ inputs.debug }}
       shell: bash
@@ -55,6 +50,7 @@ runs:
         ${{ inputs.python }} -m action_build_wheel_support.info
 
     - name: Run build-wheel code
+      shell: bash
       env:
         PYTHONPATH: ${{ github.action_path }}/src
         GITHUB_DUMP: |
@@ -73,7 +69,6 @@ runs:
             "repository": "${{ github.repository }}",
             "workflow_ref": "${{ github.workflow_ref }}"
           }
-      shell: bash
       run: |
         FILES=$(echo "${{ inputs.files }}" | tr '\n' ' ')
         ${{ inputs.python }} -m action_build_wheel_support.builder ${{ inputs.mode }} $FILES
