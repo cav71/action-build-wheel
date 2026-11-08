@@ -4,10 +4,6 @@ author: GitHub Actions
 
 # Define your inputs here.
 inputs:
-#   python:
-#     description: Configure the python command
-#     required: false
-#     default: 'uv run --no-managed-python python'
 
   mode:
     description: What kind of package to build
@@ -62,9 +58,9 @@ runs:
             },
             "ref": "${{ github.ref }}",
             "ref_type": "${{ github.ref_type }}",
+            "ref_name": "${{ github.ref_name }}",
             "sha": "${{ github.sha }}",
             "run_number": "${{ github.run_number }}",
-            "ref_name": "${{ github.ref_name }}",
             "repository": "${{ github.repository }}",
             "workflow_ref": "${{ github.workflow_ref }}"
           }
@@ -101,8 +97,6 @@ runs:
       run: |
         mkdir -p ${{ inputs.move }}
         mv dist ${{ inputs.move }}
-        
-    
     
 #    - name: Set output
 #      shell: bash
