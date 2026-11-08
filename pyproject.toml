@@ -8,7 +8,8 @@ authors = [
     { name = "A. Cavallo", email = "a.cavallo@cavallinux.eu" },
 ]
 
-license = "BSD-3-Clause"
+license = { text = "MIT" }
+
 classifiers = [
     "Development Status :: 4 - Beta",
     "Programming Language :: Python :: 3.8",

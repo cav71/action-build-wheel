@@ -4,10 +4,10 @@ author: GitHub Actions
 
 # Define your inputs here.
 inputs:
-  python:
-    description: Configure the python command
-    required: false
-    default: 'uv run --no-managed-python python'
+#   python:
+#     description: Configure the python command
+#     required: false
+#     default: 'uv run --no-managed-python python'
 
   mode:
     description: What kind of package to build
@@ -52,7 +52,7 @@ runs:
       env:
         PYTHONPATH: ${{ github.action_path }}/src
       run: |
-        ${{ inputs.python }} -m action_build_wheel_support.info
+        python -m action_build_wheel_support.info
 
     - name: Run build-wheel code
       shell: bash
@@ -76,7 +76,7 @@ runs:
           }
       run: |
         FILES=$(echo "${{ inputs.files }}" | tr '\n' ' ')
-        ${{ inputs.python }} -m action_build_wheel_support.builder ${{ inputs.mode }} $FILES
+        uv run --no-managed-python --isolated --with jinja2 -m action_build_wheel_support.builder ${{ inputs.mode }} $FILES
 
     - name: Move built data to ${{ inputs.move }}
       if: ${{ inputs.move }}

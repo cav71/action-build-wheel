@@ -517,7 +517,7 @@ def main() -> None:
     variables = create_variables(args.mode, gdata)
     variables.update(gitdump_to_shields(args.gitdump))
     if args.use_jinja2_namespace:
-        variables = {"gdata": SimpleNamespace(variables)}
+        variables = {"gdata": SimpleNamespace(**variables)}
 
     if args.dump:
         print("gdata:")
