@@ -23,10 +23,10 @@ inputs:
     description: Files to apply @VAR@ replacement
     required: false
 
-  jinja:
-    description: Uses jinja for replacement (eg. {{github.VAR}})
+  flags:
+    description: Pass flags to the builder
     required: false
-    default: False
+    default: ""
 
   move:
     description: move the dist directory after build
@@ -51,6 +51,22 @@ runs:
       shell: bash
       env:
         PYTHONPATH: ${{ github.action_path }}/src
+        GITHUB_DUMP: |
+          {
+            "event": {
+              "repository": {
+                "name": "${{ github.event.repository.name }}",
+                "default_branch": "${{ github.event.repository.default_branch }}",
+                "html_url": "${{ github.event.repository.html_url }}"
+              }
+            },
+            "ref": "${{ github.ref }}",
+            "sha": "${{ github.sha }}",
+            "run_number": "${{ github.run_number }}",
+            "ref_name": "${{ github.ref_name }}",
+            "repository": "${{ github.repository }}",
+            "workflow_ref": "${{ github.workflow_ref }}"
+          }
       run: |
         python -m action_build_wheel_support.info
 
@@ -76,7 +92,7 @@ runs:
           }
       run: |
         FILES=$(echo "${{ inputs.files }}" | tr '\n' ' ')
-        uv run --no-managed-python --isolated --with jinja2 -m action_build_wheel_support.builder ${{ inputs.mode }} $FILES
+        uv run --no-managed-python --isolated --with jinja2 -m action_build_wheel_support.builder ${{inputs.flags}} ${{ inputs.mode }} $FILES
 
     - name: Move built data to ${{ inputs.move }}
       if: ${{ inputs.move }}
