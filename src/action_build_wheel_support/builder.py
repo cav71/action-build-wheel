@@ -380,14 +380,17 @@ def gitdump_to_shields(gitdump):
     }
 
 
-def replacer(path: Path, variables: dict) -> None:
+def replacer(path: Path, variables: dict, inplace: bool = True) -> None:
     txt = path.read_text()
     for key, value in variables.items():
         txt = txt.replace(f"@{key}@", value)
-    path.write_text(txt)
+    if inplace:
+        path.write_text(txt)
+    else:
+        print(txt, file=sys.stdout)
 
 
-def replacer_jinja2(path: Path, variables: dict) -> None:
+def replacer_jinja2(path: Path, variables: dict, inplace: bool = True) -> None:
     from jinja2 import Environment
 
     env = Environment()
@@ -395,7 +398,10 @@ def replacer_jinja2(path: Path, variables: dict) -> None:
     txt = path.read_text()
     template = env.from_string(txt)
 
-    path.write_text(template.render(**variables))
+    if inplace:
+        path.write_text(template.render(**variables))
+    else:
+        print(txt, file=sys.stdout)
 
 
 def parse_arguments():
@@ -407,7 +413,10 @@ def parse_arguments():
     group.add_argument("-q", "--quiet", dest="loglevel", action="append_const", const=-1)
     parser.add_argument("-n", "--dry-run", dest="dryrun", action="store_true")
     parser.add_argument("-c", "--cache", type=Path)
-    parser.add_argument("--dump", action="store_true")
+
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("--dump", action="store_true")
+    group.add_argument("--process", type=Path)
 
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-j", "--use-jinja2", action="store_true")
@@ -516,6 +525,10 @@ def main() -> None:
         print("variables:")
         print(f"{indent(json.dumps(variables, indent=2, sort_keys=True), '| ')}")
         print(f"version_string: {gdata.version_string()}")
+        return
+    elif args.process:
+        use_jinja2 = args.use_jinja2 or args.use_jinja2_namespace
+        (replacer_jinja2 if use_jinja2 else replacer)(args.process, variables, inplace=False)
         return
 
     # pypi releases are invariant
