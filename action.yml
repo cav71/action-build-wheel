@@ -61,6 +61,7 @@ runs:
               }
             },
             "ref": "${{ github.ref }}",
+            "ref_type": "${{ github.ref_type }}",
             "sha": "${{ github.sha }}",
             "run_number": "${{ github.run_number }}",
             "ref_name": "${{ github.ref_name }}",
