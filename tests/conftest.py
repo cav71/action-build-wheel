@@ -1,4 +1,5 @@
 import json
+import sys
 from pathlib import Path
 
 import pytest
@@ -17,6 +18,8 @@ def datadir():
 @pytest.fixture(scope="function")
 def loader(datadir):
     def _load(name, typ="json"):
+        if sys.platform == "win32":
+            name = name.replace("/", "\\")
         txt = (datadir / f"{name}.{typ}").read_text()
         if typ == "json":
             return json.loads(txt)

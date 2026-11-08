@@ -128,6 +128,7 @@ class GData:
     mode: ReleaseMode
     number: int | None = None
     branch: str | None = None
+    ref: str | None = None
 
     # ref: str  # refs/heads/beta/0.0.2
     # rev: str  # 33eebf5
@@ -153,6 +154,14 @@ class GData:
             return f"{self.version}.x{self.sha[:7]}"
         else:
             raise RuntimeError(f"cannot process {self.mode}")
+
+    def update_number(self, pypi: Releases | dict) -> int | None:
+        prev = self.number
+        if not pypi or self.mode == ReleaseMode.RELEASE:
+            return prev
+        last = max(pypi.get(f"{self.mode}s", {}).get(self.version, [-1]))  # type: ignore[union-attr]
+        self.number = last + 1
+        return prev
 
 
 def indent(txt, pre):
@@ -227,14 +236,19 @@ def rget(data: dict | None, key: str) -> str | None:
     return value
 
 
-def parse_ref(ref: str, default_branch: str) -> tuple[str | None, str | None]:
+def parse_ref(ref: str) -> tuple[str | None, str | None]:
     # ref is:
     #   refs/heads/main
     #   refs/heads/beta/0.0.0
     #   refs/tags/v0.0.0
     # returns -> "beta" | "main" | None
-    if ref == f"refs/heads/{default_branch}":
-        return default_branch, None
+
+    if not ref:
+        return None, None
+
+    expr = re.compile(r"^refs/heads/(?P<kind>[^/]+)$")
+    if match := expr.search(ref):
+        return match.group("kind"), None
     expr = re.compile(r"^refs/heads/(?P<kind>[^/]+)/(?P<version>\d+([.]\d+)*)$")
     if match := expr.search(ref):
         return match.group("kind"), match.group("version")
@@ -254,22 +268,12 @@ def get_gdata(
     sha = rget(gitdump, "sha") or (git and git.sha() or None)
     log.debug("got sha '%s'", sha)
 
-    branch = rget(gitdump, "ref") or (git and git.branch())
+    ref = rget(gitdump, "ref") or (git and f"refs/heads/{git.branch()}")
+    branch = rget(gitdump, "ref_name") or (git and git.branch())
     default_branch = rget(gitdump, "event.repository.default_branch") or (git and git.default())
-    log.debug("got branch '%s' (default %s)", branch, default_branch)
+    log.debug("got branch '%s', ref '%s', default branch %s", branch, ref, default_branch)
 
-    if not (branch and default_branch):
-        branch = None, None
-    else:
-        branch = parse_ref(branch, default_branch)
-
-    return GData(
-        name=name,
-        sha=sha,
-        version=version,
-        mode=mode,
-        branch=branch[0],
-    )
+    return GData(name=name, sha=sha, version=version, mode=mode, branch=branch, ref=ref)
 
 
 def create_variables(mode: ReleaseMode, gdata: GData):
@@ -297,6 +301,24 @@ def pypi_fetch_data(name):
 
 
 def pypi_parse_releases(name: str, data: dict[str, Any] | None = None) -> Releases | None:
+    """returns a Releases structure
+    {
+      'betas': {
+        '0.0.0': [0, 1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9],
+        '0.0.1': [0],
+        ....
+      },
+      'category': {
+        '0.0.0': 'releases',
+        '0.0.0.post0': 'posts',
+        '0.0.0b0': 'betas',
+      }
+      'posts': {'0.0.0': [0]}),
+      'releases': ['0.0.0', '0.0.1'],
+      'versions': ['0.0.0', '0.0.0.post0', '0.0.0b0', '0.0.0b1', ...]
+    }
+    """
+
     if not (data := data or pypi_fetch_data(name)):
         return None
     exprs = {
@@ -480,11 +502,7 @@ def main() -> None:
             log.info("version '%s' already present in pypi", version)
 
     # fixing gdata structure
-    if args.mode in {ReleaseMode.BETA, ReleaseMode.POST}:
-        last = max(pypi.get(f"{args.mode}s", {}).get(gdata.version, [-1]))  # type: ignore[union-attr]
-        gdata.number = last + 1
-
-    gdata.branch = git.branch()
+    gdata.update_number(pypi)
 
     # variable substitutions
     variables = create_variables(args.mode, gdata)

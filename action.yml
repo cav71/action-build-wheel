@@ -23,6 +23,11 @@ inputs:
     description: Files to apply @VAR@ replacement
     required: false
 
+  jinja:
+    description: Uses jinja for replacement (eg. {{github.VAR}})
+    required: false
+    default: False
+
   move:
     description: move the dist directory after build
     required: false

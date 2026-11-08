@@ -1,0 +1,1821 @@
+{
+  "info": {
+    "author": null,
+    "author_email": "\"A. Cavallo\" <a.cavallo@cavallinux.eu>",
+    "bugtrack_url": null,
+    "classifiers": [
+      "Development Status :: 1 - Planning",
+      "Environment :: Web Environment",
+      "Framework :: Lektor",
+      "Intended Audience :: Developers",
+      "License :: OSI Approved :: BSD License",
+      "Operating System :: OS Independent",
+      "Programming Language :: Python",
+      "Programming Language :: Python :: 3",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.12",
+      "Programming Language :: Python :: 3.13",
+      "Programming Language :: Python :: 3.14",
+      "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+      "Topic :: Software Development :: Libraries :: Python Modules"
+    ],
+    "description": "# Lektor ng\n[![PyPI version](https://img.shields.io/pypi/v/lektor-ng.svg?color=blue)](https://pypi.org/project/lektor-ng)\n[![Python versions](https://img.shields.io/pypi/pyversions/acbox.svg)](https://pypi.org/project/lektor-ng)\n[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/cav71/lektor-ng/release.yml?branch=release%2F0.0.1)](https://github.com/cav71/lektor-ng/actions/workflows/release.yml?branch=release%2F0.0.1)\n[![Codecov (main)](https://img.shields.io/codecov/c/github/cav71/lektor-ng/main)](https://app.codecov.io/gh/cav71/lektor-ng/tree/main)\n\nA fork of the [lektor](https://www.getlektor.com) project.\n\nAims:\n- drop the front end to focus on the build part.\n- release early release often process.\n- lint and code coverage.\n\n\nRev. 2f2be020cfe87d2a57ca61806f3cfc6f6a94b54b | release/0.0.1\n",
+    "description_content_type": "text/markdown",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": null,
+    "keywords": null,
+    "license": null,
+    "license_expression": "BSD-3-Clause",
+    "license_files": [
+      "licenses/LICENSE",
+      "licenses/LICENSE.new"
+    ],
+    "maintainer": null,
+    "maintainer_email": null,
+    "name": "lektor-ng",
+    "package_url": "https://pypi.org/project/lektor-ng/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/lektor-ng/",
+    "project_urls": {
+      "Homepage": "https://github.com/cav71/lektor-ng",
+      "Source": "https://github.com/cav71/lektor-ng"
+    },
+    "provides_extra": [
+      "ipython"
+    ],
+    "release_url": "https://pypi.org/project/lektor-ng/0.0.1/",
+    "requires_dist": [
+      "babel",
+      "build",
+      "click>=6.0",
+      "flask",
+      "jinja2>=3.0",
+      "markupsafe",
+      "marshmallow",
+      "marshmallow-dataclass>=8.5.9",
+      "mistune!=2.0.*,<3,>=0.7.0",
+      "pillow>=6",
+      "pip",
+      "python-slugify",
+      "requests",
+      "tzdata; sys_platform == \"win32\"",
+      "watchfiles>=0.12",
+      "werkzeug>=2.1.0",
+      "ipython; extra == \"ipython\"",
+      "traitlets; extra == \"ipython\""
+    ],
+    "requires_python": ">=3.11",
+    "summary": "A fork of a static content management system (Lektor).",
+    "version": "0.0.1",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "last_serial": 41514228,
+  "ownership": {
+    "organization": null,
+    "roles": [
+      {
+        "role": "Owner",
+        "user": "a.cavallo"
+      }
+    ]
+  },
+  "releases": {
+    "0.0.0": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "3b54b5dde52ca5094ee67bb6ebc90f6bde95bd36c828b65073317e945131c00c"
+        },
+        "digests": {
+          "blake2b_256": "c3dcd99dc93deabea6fcb4f53c12e77438d4c0615b7ea9ff5b74b8cef00fe00d",
+          "md5": "96371388bbeec57ccb1f0e8597ffc5de",
+          "sha256": "7590e147481f765573e8d0a1a237ef440034b20346aa2a7437a4655b4e7a2b68"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "96371388bbeec57ccb1f0e8597ffc5de",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816899,
+        "upload_time": "2026-08-08T10:43:26",
+        "upload_time_iso_8601": "2026-08-08T10:43:26.265049Z",
+        "url": "https://files.pythonhosted.org/packages/c3/dc/d99dc93deabea6fcb4f53c12e77438d4c0615b7ea9ff5b74b8cef00fe00d/lektor_ng-0.0.0-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "51dc73a74f26eb6f1d9165585eda9a25235b28ecc8c9ddd3993bdf71bf46eb9c",
+          "md5": "66464da0d39c49bae7b605130c68ad84",
+          "sha256": "28492450ca3931c305076be968f6cb52d5e01713da3ab853ef06330cb90006f0"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0.tar.gz",
+        "has_sig": false,
+        "md5_digest": "66464da0d39c49bae7b605130c68ad84",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2339222,
+        "upload_time": "2026-08-08T10:43:27",
+        "upload_time_iso_8601": "2026-08-08T10:43:27.863121Z",
+        "url": "https://files.pythonhosted.org/packages/51/dc/73a74f26eb6f1d9165585eda9a25235b28ecc8c9ddd3993bdf71bf46eb9c/lektor_ng-0.0.0.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.0.post0": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "5b0b622c09b261ea7570d8ebf3f84c9f5d02a10815ccad81c60d898fa3dfd3bb"
+        },
+        "digests": {
+          "blake2b_256": "e96baf965f371931cc1a0dd791c59b65113120557198c608b58fc55ed4c4dd54",
+          "md5": "e16405045b5f12f086061b05ae5c10ba",
+          "sha256": "43698928e2837869dee93adff8656354fea11bb9a2a0a2b17a2c22368d57e782"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0.post0-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "e16405045b5f12f086061b05ae5c10ba",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816984,
+        "upload_time": "2026-08-08T13:00:35",
+        "upload_time_iso_8601": "2026-08-08T13:00:35.170650Z",
+        "url": "https://files.pythonhosted.org/packages/e9/6b/af965f371931cc1a0dd791c59b65113120557198c608b58fc55ed4c4dd54/lektor_ng-0.0.0.post0-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "5df9d946205abad2c967c1d985a2308709abe82005cfcef118f4deb2db58617f",
+          "md5": "3d8027c5a1cb5cdef711ed0403d752a8",
+          "sha256": "044d310f630b401fdc0a114ff4690c4b216f25e7548a316c62f8f2620076e2ca"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0.post0.tar.gz",
+        "has_sig": false,
+        "md5_digest": "3d8027c5a1cb5cdef711ed0403d752a8",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2339730,
+        "upload_time": "2026-08-08T13:00:36",
+        "upload_time_iso_8601": "2026-08-08T13:00:36.845255Z",
+        "url": "https://files.pythonhosted.org/packages/5d/f9/d946205abad2c967c1d985a2308709abe82005cfcef118f4deb2db58617f/lektor_ng-0.0.0.post0.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.0b0": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "f27680ea021af52a7bade78286766b9551041d5ccca565ea9ef116ae8f3bd393"
+        },
+        "digests": {
+          "blake2b_256": "4a6d296874dbd804ced9d0e834aa12cace0ad7146b7198e10f10d98980244988",
+          "md5": "e734019fdf8eb8b070fccc1ad3d27c96",
+          "sha256": "4be06aa4babab626009beb2de034b08aa1030de664fc8ca9ed2b1c1a07f1bb3a"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b0-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "e734019fdf8eb8b070fccc1ad3d27c96",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 817355,
+        "upload_time": "2026-08-01T21:50:00",
+        "upload_time_iso_8601": "2026-08-01T21:50:00.115245Z",
+        "url": "https://files.pythonhosted.org/packages/4a/6d/296874dbd804ced9d0e834aa12cace0ad7146b7198e10f10d98980244988/lektor_ng-0.0.0b0-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "708ebc34ab96744cd2ae53e80bb77dcf95e7978891c3c631a36a6741f3438163",
+          "md5": "316d4fe0efff2de68c4ad98238f2b111",
+          "sha256": "99fb609641e90c8b66aa4c236c98ac7ec6bb3deaa4ef01c7c549e0e59cb179b6"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b0.tar.gz",
+        "has_sig": false,
+        "md5_digest": "316d4fe0efff2de68c4ad98238f2b111",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 1815181,
+        "upload_time": "2026-08-01T21:50:02",
+        "upload_time_iso_8601": "2026-08-01T21:50:02.678845Z",
+        "url": "https://files.pythonhosted.org/packages/70/8e/bc34ab96744cd2ae53e80bb77dcf95e7978891c3c631a36a6741f3438163/lektor_ng-0.0.0b0.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.0b1": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "09f47ccdc6496d1acc06873fd50df7e5a7e8d6305d0c606f851fba980362f207"
+        },
+        "digests": {
+          "blake2b_256": "aa7075b4f0ca59671b97b2e5a49c6aeca6253a87d26b097b6a53bf78c04fb1ae",
+          "md5": "684fe67141cb761929f9325a9ee4e044",
+          "sha256": "a30612831f7cb559d9285e994bb15132f094bda4a585b95c4504e67151841836"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b1-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "684fe67141cb761929f9325a9ee4e044",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816563,
+        "upload_time": "2026-08-02T16:00:53",
+        "upload_time_iso_8601": "2026-08-02T16:00:53.010095Z",
+        "url": "https://files.pythonhosted.org/packages/aa/70/75b4f0ca59671b97b2e5a49c6aeca6253a87d26b097b6a53bf78c04fb1ae/lektor_ng-0.0.0b1-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "87e8653791b8750603cb816003b68bcd775754b989ffa061e8ef0c56bbaafe74",
+          "md5": "2ce24533c6f1b7bf0fcf386832181afe",
+          "sha256": "6d29cb862f221abfec01da5e01bfab83b4636a2a07e02ca9f9f147532388bbe7"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b1.tar.gz",
+        "has_sig": false,
+        "md5_digest": "2ce24533c6f1b7bf0fcf386832181afe",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 1843881,
+        "upload_time": "2026-08-02T16:00:54",
+        "upload_time_iso_8601": "2026-08-02T16:00:54.436874Z",
+        "url": "https://files.pythonhosted.org/packages/87/e8/653791b8750603cb816003b68bcd775754b989ffa061e8ef0c56bbaafe74/lektor_ng-0.0.0b1.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.0b10": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "7b3bebad791e65a68657e5df4b8fb70ba178d785e3804d120edfbda2ba0a2059"
+        },
+        "digests": {
+          "blake2b_256": "23a25b0529071366f5a7aaf59dd0345f8a162aeda3237b5f438c6c9916ccf25c",
+          "md5": "83575b05c1411d5cfcf5607d87290f17",
+          "sha256": "8936f983768fc265b22eee1367cb547995a57a9c501d6212fe0a70f1c6559a12"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b10-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "83575b05c1411d5cfcf5607d87290f17",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816944,
+        "upload_time": "2026-08-03T22:10:31",
+        "upload_time_iso_8601": "2026-08-03T22:10:31.458426Z",
+        "url": "https://files.pythonhosted.org/packages/23/a2/5b0529071366f5a7aaf59dd0345f8a162aeda3237b5f438c6c9916ccf25c/lektor_ng-0.0.0b10-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "363db4709de263a2b2010f79e68cbf9b7c5084f782114568a8aa76d468ff8c71",
+          "md5": "a960d60840b4cb246ac605c44cbde60f",
+          "sha256": "b2d03b40919fa8636ebdc2fc53f61ff3b49ba272954de7194ae962ddf7305677"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b10.tar.gz",
+        "has_sig": false,
+        "md5_digest": "a960d60840b4cb246ac605c44cbde60f",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2339102,
+        "upload_time": "2026-08-03T22:10:33",
+        "upload_time_iso_8601": "2026-08-03T22:10:33.846040Z",
+        "url": "https://files.pythonhosted.org/packages/36/3d/b4709de263a2b2010f79e68cbf9b7c5084f782114568a8aa76d468ff8c71/lektor_ng-0.0.0b10.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.0b11": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "ca41dbb56444dbc3b70211ca0da8afb5686a9982059ec3101c80221586e46e06"
+        },
+        "digests": {
+          "blake2b_256": "2616c303925cebaf6506bd920cf47ecefb02516b62cf41641772abc208e53a85",
+          "md5": "65ab3800313f87f6221db744253df16f",
+          "sha256": "d8fb341afe158d33129eed914edf481d06a689787fcadfc32fe0ce219cb5fb1c"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b11-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "65ab3800313f87f6221db744253df16f",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816944,
+        "upload_time": "2026-08-03T22:22:21",
+        "upload_time_iso_8601": "2026-08-03T22:22:21.067289Z",
+        "url": "https://files.pythonhosted.org/packages/26/16/c303925cebaf6506bd920cf47ecefb02516b62cf41641772abc208e53a85/lektor_ng-0.0.0b11-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "8f63567806c5f90c33d2648a9c91bec6eb0c7384614ba7e03c1c580f1a965515",
+          "md5": "931d38a5b670751ec11d1298bb5573de",
+          "sha256": "57a17267692f81501749daaa1794288732144cb185f468d332734b5b2ccc89cc"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b11.tar.gz",
+        "has_sig": false,
+        "md5_digest": "931d38a5b670751ec11d1298bb5573de",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2339292,
+        "upload_time": "2026-08-03T22:22:23",
+        "upload_time_iso_8601": "2026-08-03T22:22:23.216354Z",
+        "url": "https://files.pythonhosted.org/packages/8f/63/567806c5f90c33d2648a9c91bec6eb0c7384614ba7e03c1c580f1a965515/lektor_ng-0.0.0b11.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.0b12": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "b4164c493e542dc411f4d95f4aa323e17fe949df5b986e481a2adcd256a4d11e"
+        },
+        "digests": {
+          "blake2b_256": "f6eb4128620188d06fbd67f310a5ef847ef60cb40fd91ae2db4d213d9e3a5765",
+          "md5": "b4c23c7e29eb98405bee6fb5de5c58eb",
+          "sha256": "1d75b0e952d46b52a27f6b7bac39f6c4f4ebc620faf184af8a470d624a7d9d1d"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b12-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "b4c23c7e29eb98405bee6fb5de5c58eb",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816942,
+        "upload_time": "2026-08-08T00:41:25",
+        "upload_time_iso_8601": "2026-08-08T00:41:25.401056Z",
+        "url": "https://files.pythonhosted.org/packages/f6/eb/4128620188d06fbd67f310a5ef847ef60cb40fd91ae2db4d213d9e3a5765/lektor_ng-0.0.0b12-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "547903c20922ccbddc725b4d56626daba835a5e9541a7501a7b24b5db2a17e52",
+          "md5": "3e1c8358f17bed948e570306373aa4a3",
+          "sha256": "fe6426f1c6d4d13617717dc69d98a95f019b85ef2d74435914fb332992824ad5"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b12.tar.gz",
+        "has_sig": false,
+        "md5_digest": "3e1c8358f17bed948e570306373aa4a3",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2339544,
+        "upload_time": "2026-08-08T00:41:27",
+        "upload_time_iso_8601": "2026-08-08T00:41:27.373267Z",
+        "url": "https://files.pythonhosted.org/packages/54/79/03c20922ccbddc725b4d56626daba835a5e9541a7501a7b24b5db2a17e52/lektor_ng-0.0.0b12.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.0b13": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "72c13d3c1d8dc978b6f97119cd2fcba31c9bf2ddb77e3f184b7bf195bc0351d9"
+        },
+        "digests": {
+          "blake2b_256": "a20e69f88639c059b2d86903dc6f2f9bc0b4653d6772d3e03fc7d79b13636e6c",
+          "md5": "99a5855907eb7259f6cc8353e9385856",
+          "sha256": "a36e2bd301da59371be9ca5fbf7458e12d66a015fc32914b91c8ab7f43d2995a"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b13-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "99a5855907eb7259f6cc8353e9385856",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816945,
+        "upload_time": "2026-08-08T16:48:15",
+        "upload_time_iso_8601": "2026-08-08T16:48:15.223130Z",
+        "url": "https://files.pythonhosted.org/packages/a2/0e/69f88639c059b2d86903dc6f2f9bc0b4653d6772d3e03fc7d79b13636e6c/lektor_ng-0.0.0b13-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "ceb86461cb42065cd1f2b1fd2f1bd9017338df44717080361807fb36b0213653",
+          "md5": "9ebd8ee44c57e072fc30a6d99b346c3f",
+          "sha256": "d5fa1600d2fbf0e0a266d44a6ef4e3f80575c6c4d7d33ec7fc50c3d8b2c97659"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b13.tar.gz",
+        "has_sig": false,
+        "md5_digest": "9ebd8ee44c57e072fc30a6d99b346c3f",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2339748,
+        "upload_time": "2026-08-08T16:48:16",
+        "upload_time_iso_8601": "2026-08-08T16:48:16.655432Z",
+        "url": "https://files.pythonhosted.org/packages/ce/b8/6461cb42065cd1f2b1fd2f1bd9017338df44717080361807fb36b0213653/lektor_ng-0.0.0b13.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.0b2": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "1a6e227798b796e39c02491923b671e64ad25d50775b27f86ec8a6160ec2c036"
+        },
+        "digests": {
+          "blake2b_256": "8441790bf60071dd673ef93a2dfadf0e20fe3825d5f626c2d257b6088e809fb4",
+          "md5": "c6954e54efead8fe71a4c29a43faa3e0",
+          "sha256": "67fdf4937689a0d757ff2754e9525a1aa37829e481855ecde6a46966987aea15"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b2-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "c6954e54efead8fe71a4c29a43faa3e0",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816563,
+        "upload_time": "2026-08-02T16:20:57",
+        "upload_time_iso_8601": "2026-08-02T16:20:57.043412Z",
+        "url": "https://files.pythonhosted.org/packages/84/41/790bf60071dd673ef93a2dfadf0e20fe3825d5f626c2d257b6088e809fb4/lektor_ng-0.0.0b2-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "8f8e3be70c73251027fa50e5655f029e49f1a377230dae91a4c0f680e4693c31",
+          "md5": "ca1572dae53778d1dfb34208c22c5cd4",
+          "sha256": "073183df15bbf46ecc07f14c0c90324383796c4a83fee6e9a752158d055ceb7b"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b2.tar.gz",
+        "has_sig": false,
+        "md5_digest": "ca1572dae53778d1dfb34208c22c5cd4",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 1843749,
+        "upload_time": "2026-08-02T16:20:58",
+        "upload_time_iso_8601": "2026-08-02T16:20:58.901413Z",
+        "url": "https://files.pythonhosted.org/packages/8f/8e/3be70c73251027fa50e5655f029e49f1a377230dae91a4c0f680e4693c31/lektor_ng-0.0.0b2.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.0b3": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "a11350323e497981c366f3c917abab8a28fb4c9c8607e51811d6b6ad620fdc51"
+        },
+        "digests": {
+          "blake2b_256": "6e4241ab3134751944e46623ff277a284e8024e33841e3a44616bc31a91134de",
+          "md5": "fe09c06e8034803a4fb0cac58a3bcf78",
+          "sha256": "76afa509bae751e010af4969983dea7e72baa7d732ac394fe026fa7dd6e8332e"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b3-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "fe09c06e8034803a4fb0cac58a3bcf78",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816563,
+        "upload_time": "2026-08-02T18:44:09",
+        "upload_time_iso_8601": "2026-08-02T18:44:09.882775Z",
+        "url": "https://files.pythonhosted.org/packages/6e/42/41ab3134751944e46623ff277a284e8024e33841e3a44616bc31a91134de/lektor_ng-0.0.0b3-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "f06b4f21644ad71a2087f5f09b30c33032cf939f87802984b4c0bb863476746d",
+          "md5": "73b18aea49a46e02c13b3e8d9218883e",
+          "sha256": "0634ff4240b48c64c215550cd44c458fe3bed3c791deb61005979071963ffa20"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b3.tar.gz",
+        "has_sig": false,
+        "md5_digest": "73b18aea49a46e02c13b3e8d9218883e",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 1843648,
+        "upload_time": "2026-08-02T18:44:11",
+        "upload_time_iso_8601": "2026-08-02T18:44:11.836579Z",
+        "url": "https://files.pythonhosted.org/packages/f0/6b/4f21644ad71a2087f5f09b30c33032cf939f87802984b4c0bb863476746d/lektor_ng-0.0.0b3.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.0b4": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "45d3843404eeeacbcefd3819c24ba218d44c168e773b0084e71c4ebe1f3da90f"
+        },
+        "digests": {
+          "blake2b_256": "a71c1e3e1ebce665836dd4930f1c746aae888708908896aad72a0221e6a10dda",
+          "md5": "b845a569fd473c62e858ab6f91cf0658",
+          "sha256": "69e97167f8f59946450eaf9db5339ba22c3c7fd5c2c50823cd533ff8e92859e9"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b4-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "b845a569fd473c62e858ab6f91cf0658",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816888,
+        "upload_time": "2026-08-02T20:40:24",
+        "upload_time_iso_8601": "2026-08-02T20:40:24.389388Z",
+        "url": "https://files.pythonhosted.org/packages/a7/1c/1e3e1ebce665836dd4930f1c746aae888708908896aad72a0221e6a10dda/lektor_ng-0.0.0b4-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "162161fc3c1d1431de62ef716e27af26fd3a26a76775fb91f5a6ec2bebfe5822",
+          "md5": "004af167ecd6ce0cb92690688c61898a",
+          "sha256": "dd54e7eb7028a90d644c8113fb6133da2465e9adf9440b2dbfeae4f0c46deace"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b4.tar.gz",
+        "has_sig": false,
+        "md5_digest": "004af167ecd6ce0cb92690688c61898a",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2333485,
+        "upload_time": "2026-08-02T20:40:26",
+        "upload_time_iso_8601": "2026-08-02T20:40:26.167783Z",
+        "url": "https://files.pythonhosted.org/packages/16/21/61fc3c1d1431de62ef716e27af26fd3a26a76775fb91f5a6ec2bebfe5822/lektor_ng-0.0.0b4.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.0b5": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "b7578401af26b9d9063fa27c4496ed09f4f57975b681de78e45975980d187a5c"
+        },
+        "digests": {
+          "blake2b_256": "26e1f946645dc0401dfd91516eb1e67472612263e6876c23f44b7e003e525b29",
+          "md5": "8a8a525ba3977fb6dff618364217087e",
+          "sha256": "b69784de5df89e07c10bc51a93e4a780fc8930c59c811afeabf6f5ca70c6556b"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b5-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "8a8a525ba3977fb6dff618364217087e",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816895,
+        "upload_time": "2026-08-03T16:05:57",
+        "upload_time_iso_8601": "2026-08-03T16:05:57.615557Z",
+        "url": "https://files.pythonhosted.org/packages/26/e1/f946645dc0401dfd91516eb1e67472612263e6876c23f44b7e003e525b29/lektor_ng-0.0.0b5-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "3fe3ba760dc0d66f3b446346cf3e9dcd25e9f10363ebdafb5f43bfe32e5949ee",
+          "md5": "2b10b41319b9dae4c170f7f130f11e02",
+          "sha256": "9ca999dca33acc196c488437afebe57a7426c26c17b75bd8eea2ccc08d3fe65a"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b5.tar.gz",
+        "has_sig": false,
+        "md5_digest": "2b10b41319b9dae4c170f7f130f11e02",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2334008,
+        "upload_time": "2026-08-03T16:05:59",
+        "upload_time_iso_8601": "2026-08-03T16:05:59.498885Z",
+        "url": "https://files.pythonhosted.org/packages/3f/e3/ba760dc0d66f3b446346cf3e9dcd25e9f10363ebdafb5f43bfe32e5949ee/lektor_ng-0.0.0b5.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.0b6": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "c1834835a38b2b5990db7f261e0227a3b278db75c7b18e9444f4a2ae25cf0140"
+        },
+        "digests": {
+          "blake2b_256": "cb280f0b150af5d42a58e9284b940055b10c7aaa7b5d61e78609170d9d54e4e8",
+          "md5": "3df8c45c7e455fd6fc8b8bb68b5b27ac",
+          "sha256": "7f9b6e24f391bd01e9b957e3334b63c8b3fc66af581b018c572cc24817da5542"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b6-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "3df8c45c7e455fd6fc8b8bb68b5b27ac",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816900,
+        "upload_time": "2026-08-03T16:21:45",
+        "upload_time_iso_8601": "2026-08-03T16:21:45.519591Z",
+        "url": "https://files.pythonhosted.org/packages/cb/28/0f0b150af5d42a58e9284b940055b10c7aaa7b5d61e78609170d9d54e4e8/lektor_ng-0.0.0b6-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "949044a71286f6fcd3e9740463ba24bc29bc565844c4565ebcf4aa8fa886bed5",
+          "md5": "a80dca0b661817dba8ece07df70db8db",
+          "sha256": "d38a0168bfc41cc8d7498679670113f856a2a2e5662dda295c83465de2fd0887"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b6.tar.gz",
+        "has_sig": false,
+        "md5_digest": "a80dca0b661817dba8ece07df70db8db",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2339087,
+        "upload_time": "2026-08-03T16:21:47",
+        "upload_time_iso_8601": "2026-08-03T16:21:47.177345Z",
+        "url": "https://files.pythonhosted.org/packages/94/90/44a71286f6fcd3e9740463ba24bc29bc565844c4565ebcf4aa8fa886bed5/lektor_ng-0.0.0b6.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.0b7": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "5779374213e824e11487dcc5d927c05ecc7fa3723906ded031ed5add2cf2c1b5"
+        },
+        "digests": {
+          "blake2b_256": "f25de9b9e8f9472d4acf59dbfbb828ae5c372feeb07b6462da51b40eab6c54a3",
+          "md5": "82422fcabe3e7cc8bee34744e9cd54e4",
+          "sha256": "ab5115de61c48e9d3a6d7ef6155dde1f217dc687303fb339bc73f97774291bff"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b7-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "82422fcabe3e7cc8bee34744e9cd54e4",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816918,
+        "upload_time": "2026-08-03T18:00:20",
+        "upload_time_iso_8601": "2026-08-03T18:00:20.424454Z",
+        "url": "https://files.pythonhosted.org/packages/f2/5d/e9b9e8f9472d4acf59dbfbb828ae5c372feeb07b6462da51b40eab6c54a3/lektor_ng-0.0.0b7-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "44e69194b2d92ddd9847e8ec60c6cd4357fdb401980c772652bf82455cc35e56",
+          "md5": "0674d72f98a8e47f7fbde87632214eab",
+          "sha256": "e1bbfc5d11f22a44db1f351ce4cfb688d480f16aaa5040b82b6814b94191a3a5"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b7.tar.gz",
+        "has_sig": false,
+        "md5_digest": "0674d72f98a8e47f7fbde87632214eab",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2338957,
+        "upload_time": "2026-08-03T18:00:22",
+        "upload_time_iso_8601": "2026-08-03T18:00:22.884467Z",
+        "url": "https://files.pythonhosted.org/packages/44/e6/9194b2d92ddd9847e8ec60c6cd4357fdb401980c772652bf82455cc35e56/lektor_ng-0.0.0b7.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.0b8": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "5327a65f09df13dd30c4f22eef050f028b21c4ad8f26a2e5e50138536777544d"
+        },
+        "digests": {
+          "blake2b_256": "36eb33c283c421306de785db91a63548043f9b3af42cf769a53e17016ddf8849",
+          "md5": "1b0be7e7c2714ef87db0974740978c37",
+          "sha256": "947791b27b3d8ab43791c9d7f9f028dc0a7f443cb9bfaaf5c60adde08a057067"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b8-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "1b0be7e7c2714ef87db0974740978c37",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816919,
+        "upload_time": "2026-08-03T19:20:58",
+        "upload_time_iso_8601": "2026-08-03T19:20:58.245206Z",
+        "url": "https://files.pythonhosted.org/packages/36/eb/33c283c421306de785db91a63548043f9b3af42cf769a53e17016ddf8849/lektor_ng-0.0.0b8-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "10096e29cfc3e930eef902325d2f70d135d7e73bdc3e64c713f97a0821a7eda9",
+          "md5": "cc0b6221d5a265ef6de88fc8ebac8d4f",
+          "sha256": "117983e5978933cb745e3052be44f5d4e9a43028859a8e94043b1f8defe9711b"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b8.tar.gz",
+        "has_sig": false,
+        "md5_digest": "cc0b6221d5a265ef6de88fc8ebac8d4f",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2339568,
+        "upload_time": "2026-08-03T19:21:00",
+        "upload_time_iso_8601": "2026-08-03T19:21:00.121639Z",
+        "url": "https://files.pythonhosted.org/packages/10/09/6e29cfc3e930eef902325d2f70d135d7e73bdc3e64c713f97a0821a7eda9/lektor_ng-0.0.0b8.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.0b9": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "c5c513e5a903558c841e77a5f10ddf8f27b01f5ff82f7966516acace9a62506f"
+        },
+        "digests": {
+          "blake2b_256": "0539e8bfae428e9613f2d242263f24bd932c35f3ed60b5571cdba5cabf0d9eaf",
+          "md5": "786a285bcd83838d7c46e987bfbf3623",
+          "sha256": "37000056048bf0a209f453540d1ae801ad8ab3c4c456c27d43b579d4e06e1774"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b9-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "786a285bcd83838d7c46e987bfbf3623",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816927,
+        "upload_time": "2026-08-03T21:11:09",
+        "upload_time_iso_8601": "2026-08-03T21:11:09.258211Z",
+        "url": "https://files.pythonhosted.org/packages/05/39/e8bfae428e9613f2d242263f24bd932c35f3ed60b5571cdba5cabf0d9eaf/lektor_ng-0.0.0b9-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "177ce152dd5ef781d5fabd6fe576a0b7b8a91b33a389e4da4d74a391eb4f7a63",
+          "md5": "c10969477812a8459c48e9a8e4801e7e",
+          "sha256": "26cc0c51764004c2018e0bbcef50b95209352599ca2c676bebc0436ca5eb4c08"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.0b9.tar.gz",
+        "has_sig": false,
+        "md5_digest": "c10969477812a8459c48e9a8e4801e7e",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2339045,
+        "upload_time": "2026-08-03T21:11:10",
+        "upload_time_iso_8601": "2026-08-03T21:11:10.834364Z",
+        "url": "https://files.pythonhosted.org/packages/17/7c/e152dd5ef781d5fabd6fe576a0b7b8a91b33a389e4da4d74a391eb4f7a63/lektor_ng-0.0.0b9.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.1": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "64286f1b17e71ac7f7b9e7af668ba744a588165cbaf795d43e5deeb64a07b4c8"
+        },
+        "digests": {
+          "blake2b_256": "f700a85f739eca6f2eabbcd2b0dc6c8a475d58a569eb65e49ea33690229e1cc6",
+          "md5": "a2e83b013130f21dbcab51dc86712242",
+          "sha256": "00fffadf57f68af5235615b81d0511f2d730b72dc43627f1171bca9e0cf247c4"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.1-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "a2e83b013130f21dbcab51dc86712242",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816906,
+        "upload_time": "2026-08-09T00:30:25",
+        "upload_time_iso_8601": "2026-08-09T00:30:25.151628Z",
+        "url": "https://files.pythonhosted.org/packages/f7/00/a85f739eca6f2eabbcd2b0dc6c8a475d58a569eb65e49ea33690229e1cc6/lektor_ng-0.0.1-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "7dd26ce0c7029d49da060bf0d5c208af2d3ce006729b204804fd70e1d7faf08f",
+          "md5": "025dfa3ce1b83b93bb4650c3dd3b117b",
+          "sha256": "e2871fad94e8ef37488b9de26462ad3333eb9b9bf43584de63c328ad6b5f30b1"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.1.tar.gz",
+        "has_sig": false,
+        "md5_digest": "025dfa3ce1b83b93bb4650c3dd3b117b",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2335183,
+        "upload_time": "2026-08-09T00:30:26",
+        "upload_time_iso_8601": "2026-08-09T00:30:26.852374Z",
+        "url": "https://files.pythonhosted.org/packages/7d/d2/6ce0c7029d49da060bf0d5c208af2d3ce006729b204804fd70e1d7faf08f/lektor_ng-0.0.1.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.1b0": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "603d51d1ea04da284661c27adb0e1a83e8579d78a13b5ea918fe6c9d87fb332a"
+        },
+        "digests": {
+          "blake2b_256": "a8b0b4ce28395d8436eb783d63cc2512d41cf7a08df97f1323af02977a5d28fa",
+          "md5": "f70a89de9af891b3d713dc67f40ad47c",
+          "sha256": "b827cd3f11195334de4528ad4306cface92482e325de19526007f029aa999f01"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.1b0-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "f70a89de9af891b3d713dc67f40ad47c",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 816935,
+        "upload_time": "2026-08-08T23:31:30",
+        "upload_time_iso_8601": "2026-08-08T23:31:30.167262Z",
+        "url": "https://files.pythonhosted.org/packages/a8/b0/b4ce28395d8436eb783d63cc2512d41cf7a08df97f1323af02977a5d28fa/lektor_ng-0.0.1b0-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "970d1fc48cc422bf5324d2f0401dfa54be4ac5ab7d3b47f0b22e7bd9642e56e3",
+          "md5": "b6dd230c43a1aa1816606b4be5973567",
+          "sha256": "e31872e91e53b81c8e11093925090b43a68ae2325171e4129462c2a27dcfe3d0"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.1b0.tar.gz",
+        "has_sig": false,
+        "md5_digest": "b6dd230c43a1aa1816606b4be5973567",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2335407,
+        "upload_time": "2026-08-08T23:31:32",
+        "upload_time_iso_8601": "2026-08-08T23:31:32.034432Z",
+        "url": "https://files.pythonhosted.org/packages/97/0d/1fc48cc422bf5324d2f0401dfa54be4ac5ab7d3b47f0b22e7bd9642e56e3/lektor_ng-0.0.1b0.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b0": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "ccaed05ea012522b9b1c7f54b96c8131cc1e2bac07c5bceb40697419bf0ff2f0"
+        },
+        "digests": {
+          "blake2b_256": "aab838316a4746a7a00b35cda360166ea1c96aa9c8875134a25ae92b5f826c77",
+          "md5": "92e31b376ee7f73daa8752c900600ff6",
+          "sha256": "246f828b86f012083f544c63c93c17d7c7393ce22e6059f296ad87b98373c0bb"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b0-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "92e31b376ee7f73daa8752c900600ff6",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819382,
+        "upload_time": "2026-08-30T13:51:33",
+        "upload_time_iso_8601": "2026-08-30T13:51:33.913660Z",
+        "url": "https://files.pythonhosted.org/packages/aa/b8/38316a4746a7a00b35cda360166ea1c96aa9c8875134a25ae92b5f826c77/lektor_ng-0.0.2b0-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "2acadad060383a1fc58de542d5302e930fa641803eb7f5dec16965df9320a1c3",
+          "md5": "8d86b4282da537cdf969d97b160c3182",
+          "sha256": "77fde9e2ddae4ecd31aa2bd8513b3b1cdd2fc773d33f288a2ab7b8c749821a1a"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b0.tar.gz",
+        "has_sig": false,
+        "md5_digest": "8d86b4282da537cdf969d97b160c3182",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2646778,
+        "upload_time": "2026-08-30T13:51:35",
+        "upload_time_iso_8601": "2026-08-30T13:51:35.714768Z",
+        "url": "https://files.pythonhosted.org/packages/2a/ca/dad060383a1fc58de542d5302e930fa641803eb7f5dec16965df9320a1c3/lektor_ng-0.0.2b0.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b1": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "abeec784f08cde6d64c4e2377f6f4ad8b156e0a2c859a2263f4aba479fd19e37"
+        },
+        "digests": {
+          "blake2b_256": "34edcd92cfc89e79d2b913d61c36230c48a1022327efb2befe955a6f10d8b07f",
+          "md5": "b8eaf2965b830e74ff6ff5697ef9fb9f",
+          "sha256": "bea43f558cfe7a3ca317b3bc5a8a10f16ab7854e51064f80aedf5e251813f29f"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b1-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "b8eaf2965b830e74ff6ff5697ef9fb9f",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819200,
+        "upload_time": "2026-08-31T01:07:22",
+        "upload_time_iso_8601": "2026-08-31T01:07:22.535175Z",
+        "url": "https://files.pythonhosted.org/packages/34/ed/cd92cfc89e79d2b913d61c36230c48a1022327efb2befe955a6f10d8b07f/lektor_ng-0.0.2b1-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "1c1a52a6cf90a825cbe3171970ef6e713ddb23ae61e0adeb7747960d28519f19",
+          "md5": "b929e5b7506cde1fc334c6f68edb81b0",
+          "sha256": "e12d61dbf7c77618d12ad02abbf1c9920fe3010f8eabc3ed9dff1d39df307b14"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b1.tar.gz",
+        "has_sig": false,
+        "md5_digest": "b929e5b7506cde1fc334c6f68edb81b0",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2647024,
+        "upload_time": "2026-08-31T01:07:24",
+        "upload_time_iso_8601": "2026-08-31T01:07:24.401031Z",
+        "url": "https://files.pythonhosted.org/packages/1c/1a/52a6cf90a825cbe3171970ef6e713ddb23ae61e0adeb7747960d28519f19/lektor_ng-0.0.2b1.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b10": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "480f48e23481493995390bf0728e424bd8b0601d79b8802406b407d5dbd21b32"
+        },
+        "digests": {
+          "blake2b_256": "48e2ab9b015dead30b6e536b56f1c16b72199b2632a69978a7add28a5aaad19d",
+          "md5": "73d41aa7ba660e7c46d5e4674d6a91f5",
+          "sha256": "7d8b7e82feece2dd57316f1f7fbdc6b41152a59bb55155332de45b6f86cdbe93"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b10-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "73d41aa7ba660e7c46d5e4674d6a91f5",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819286,
+        "upload_time": "2026-09-05T15:24:16",
+        "upload_time_iso_8601": "2026-09-05T15:24:16.384741Z",
+        "url": "https://files.pythonhosted.org/packages/48/e2/ab9b015dead30b6e536b56f1c16b72199b2632a69978a7add28a5aaad19d/lektor_ng-0.0.2b10-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "e782797c80b51b68b9d4229f29c9851bfbade4590741f504e1de2a6e9431976b",
+          "md5": "16dd0ffac47f5ee4156674bc82c0801d",
+          "sha256": "2cc5e36705fc4c5955b31dc31c8ee4e317a53064a83a866f0700f389c65e89a2"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b10.tar.gz",
+        "has_sig": false,
+        "md5_digest": "16dd0ffac47f5ee4156674bc82c0801d",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 3302015,
+        "upload_time": "2026-09-05T15:24:17",
+        "upload_time_iso_8601": "2026-09-05T15:24:17.993706Z",
+        "url": "https://files.pythonhosted.org/packages/e7/82/797c80b51b68b9d4229f29c9851bfbade4590741f504e1de2a6e9431976b/lektor_ng-0.0.2b10.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b11": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "9c4167b5c58bc9529d2ed9db8e5c0c508d757203c9a0a15ce66471ebbd1ddc80"
+        },
+        "digests": {
+          "blake2b_256": "6dec0daf7093e20c92f54ff869c69058a180e6ef53f14e1aabd2814b8808bb11",
+          "md5": "3fa9bcde3eae5f0534b83fe7e56f5259",
+          "sha256": "021580b369508a98b67cda00024444996f8179e138e4c94ae93f1879eeea198d"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b11-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "3fa9bcde3eae5f0534b83fe7e56f5259",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819287,
+        "upload_time": "2026-09-05T15:28:26",
+        "upload_time_iso_8601": "2026-09-05T15:28:26.598126Z",
+        "url": "https://files.pythonhosted.org/packages/6d/ec/0daf7093e20c92f54ff869c69058a180e6ef53f14e1aabd2814b8808bb11/lektor_ng-0.0.2b11-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "64f9cc5289951159022b1e4ca825ee703c57975bd34e7e45da632d03f7e4a590",
+          "md5": "80729eb7b6d0bd4176ccf510fd89d98e",
+          "sha256": "c1149d53c978c974763b00814948176e913299fccf7538e057131c580a5ed836"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b11.tar.gz",
+        "has_sig": false,
+        "md5_digest": "80729eb7b6d0bd4176ccf510fd89d98e",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 3302114,
+        "upload_time": "2026-09-05T15:28:28",
+        "upload_time_iso_8601": "2026-09-05T15:28:28.710300Z",
+        "url": "https://files.pythonhosted.org/packages/64/f9/cc5289951159022b1e4ca825ee703c57975bd34e7e45da632d03f7e4a590/lektor_ng-0.0.2b11.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b12": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "9f0a33aeaccab02f40459534bcec2eb4dc1d95f799331d3ae44328220e4b00dc"
+        },
+        "digests": {
+          "blake2b_256": "ef4f030585038e86e7c91a8c95d16c1fc1dcfc8c11fd864bb88657d9c07bed3e",
+          "md5": "3d1c511bace7737bb8b177f30603f17e",
+          "sha256": "2c651f6920e023ee927774e808fb3422831a04af721ca2aec9392542588bfb29"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b12-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "3d1c511bace7737bb8b177f30603f17e",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819291,
+        "upload_time": "2026-09-05T15:45:00",
+        "upload_time_iso_8601": "2026-09-05T15:45:00.999994Z",
+        "url": "https://files.pythonhosted.org/packages/ef/4f/030585038e86e7c91a8c95d16c1fc1dcfc8c11fd864bb88657d9c07bed3e/lektor_ng-0.0.2b12-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "f986f5bc3bc2f601b21b0e173cd7b9f8c9c6f80b205c49fecfb9addfb62f9585",
+          "md5": "262a2a861cc80915e9ed08023ed256b1",
+          "sha256": "7c74ee360988ed7a40d68ba46c8ef410fe185af0c868f25167f5c9f14e4822eb"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b12.tar.gz",
+        "has_sig": false,
+        "md5_digest": "262a2a861cc80915e9ed08023ed256b1",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 3302332,
+        "upload_time": "2026-09-05T15:45:03",
+        "upload_time_iso_8601": "2026-09-05T15:45:03.109210Z",
+        "url": "https://files.pythonhosted.org/packages/f9/86/f5bc3bc2f601b21b0e173cd7b9f8c9c6f80b205c49fecfb9addfb62f9585/lektor_ng-0.0.2b12.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b13": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "142696660427d05b3247c527750e63131cc9d74dc4782c5d2855c3cd9ca6a20d"
+        },
+        "digests": {
+          "blake2b_256": "7270190884e5646275e439224f91907f5dea1d3b8223f794e89a2f86c0228139",
+          "md5": "5866c52910327cbe405c9677c5a45b93",
+          "sha256": "49895eb86dbd4f8f502c8b8a2c379fdee7454f8d50fc1d8f80827b7e58d6082f"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b13-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "5866c52910327cbe405c9677c5a45b93",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819289,
+        "upload_time": "2026-09-05T16:32:23",
+        "upload_time_iso_8601": "2026-09-05T16:32:23.620695Z",
+        "url": "https://files.pythonhosted.org/packages/72/70/190884e5646275e439224f91907f5dea1d3b8223f794e89a2f86c0228139/lektor_ng-0.0.2b13-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "c3fcbc7a45a8307217bbd186c3fff5fce38b3c976dac34ce0f386a677045f9e8",
+          "md5": "7726dda4f4f070dc2144b247eefe66e3",
+          "sha256": "7f143b90e1284c33f0e7ea9197fec93a83a6840066443c8c7400ea9077a8515a"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b13.tar.gz",
+        "has_sig": false,
+        "md5_digest": "7726dda4f4f070dc2144b247eefe66e3",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 3302577,
+        "upload_time": "2026-09-05T16:32:25",
+        "upload_time_iso_8601": "2026-09-05T16:32:25.279442Z",
+        "url": "https://files.pythonhosted.org/packages/c3/fc/bc7a45a8307217bbd186c3fff5fce38b3c976dac34ce0f386a677045f9e8/lektor_ng-0.0.2b13.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b14": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "2e5a934f3257fc5a92eb06d58603974dd2a814bee9ba3ba6dc4b6cb48dad3453"
+        },
+        "digests": {
+          "blake2b_256": "faafad8e682205501e4ef2d7c670dcfdeb7e1edfca6ef795ce89d9dbd70e370f",
+          "md5": "d4ca11cc7c9a73d9e5408bc6ea269bcd",
+          "sha256": "e1e6c6de3cf64dbaeb79e8df900e9b50cb25cad651ad26ee7e717ed400d6e78b"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b14-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "d4ca11cc7c9a73d9e5408bc6ea269bcd",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819290,
+        "upload_time": "2026-09-05T16:53:32",
+        "upload_time_iso_8601": "2026-09-05T16:53:32.765439Z",
+        "url": "https://files.pythonhosted.org/packages/fa/af/ad8e682205501e4ef2d7c670dcfdeb7e1edfca6ef795ce89d9dbd70e370f/lektor_ng-0.0.2b14-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "c9399563adb802e162a66b9d0fc1f68b717a7773ca7406059028d068113bb919",
+          "md5": "9f40381292a5b63d0f0d05aa2f58f09a",
+          "sha256": "a917293d8b61da3cdd861fd34e101d326b4c01aab5eb71ea019928822315ff97"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b14.tar.gz",
+        "has_sig": false,
+        "md5_digest": "9f40381292a5b63d0f0d05aa2f58f09a",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 3302037,
+        "upload_time": "2026-09-05T16:53:34",
+        "upload_time_iso_8601": "2026-09-05T16:53:34.850202Z",
+        "url": "https://files.pythonhosted.org/packages/c9/39/9563adb802e162a66b9d0fc1f68b717a7773ca7406059028d068113bb919/lektor_ng-0.0.2b14.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b15": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "3b0d4b9a6e0646e24da6a9a44b892fbd7117bcc5cdc4f639b96a8cf06071377e"
+        },
+        "digests": {
+          "blake2b_256": "93affbd705a33cab3943374d8db20d385a0139bd1687df8411773a1409c974e2",
+          "md5": "378531c401e0637cf5490b8a6763d71e",
+          "sha256": "929f6ba093928a7c1d3b9d05fe44a41858f3bbda8ee608d66aad2fe66e33c7e2"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b15-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "378531c401e0637cf5490b8a6763d71e",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819525,
+        "upload_time": "2026-09-07T13:15:56",
+        "upload_time_iso_8601": "2026-09-07T13:15:56.225323Z",
+        "url": "https://files.pythonhosted.org/packages/93/af/fbd705a33cab3943374d8db20d385a0139bd1687df8411773a1409c974e2/lektor_ng-0.0.2b15-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "d9e18781c919603e52beb831db1fad9249a6a479eea7f7f08bcb1427595d0e33",
+          "md5": "dee2476a66d80eec1d811b1536d0efef",
+          "sha256": "321ffb05a2468e8290025c10e7c1fbef6fcf39f93e55a4549c8a34cecb668911"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b15.tar.gz",
+        "has_sig": false,
+        "md5_digest": "dee2476a66d80eec1d811b1536d0efef",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 3304255,
+        "upload_time": "2026-09-07T13:16:05",
+        "upload_time_iso_8601": "2026-09-07T13:16:05.882146Z",
+        "url": "https://files.pythonhosted.org/packages/d9/e1/8781c919603e52beb831db1fad9249a6a479eea7f7f08bcb1427595d0e33/lektor_ng-0.0.2b15.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b16": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "b8aeeece55e0d3ce0fdd88dbd4f7de0786e4744bca0e7955a7833aae0f0f88cd"
+        },
+        "digests": {
+          "blake2b_256": "8596e46597caf67341b690bbbf152f49c2bcf6721e3cb5b12ef2fb915af9b985",
+          "md5": "e350b18bacce5def383661ee9bb5ec55",
+          "sha256": "aeea97e7348bacc65a0536f0a4b8745d9cd6f094c32a89de4fa5076bbc438223"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b16-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "e350b18bacce5def383661ee9bb5ec55",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819626,
+        "upload_time": "2026-09-27T11:44:36",
+        "upload_time_iso_8601": "2026-09-27T11:44:36.424436Z",
+        "url": "https://files.pythonhosted.org/packages/85/96/e46597caf67341b690bbbf152f49c2bcf6721e3cb5b12ef2fb915af9b985/lektor_ng-0.0.2b16-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "145b86b96c65b31d6d8e7ddc849934bb9e03c94f5164d6d41fa20964c56ee935",
+          "md5": "09e5a82e90b45360a97c4715fedeb73b",
+          "sha256": "fade51d099bc257e5ade7269f70aa3d18cd6a7a6afd8e10340bfcbe800684b72"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b16.tar.gz",
+        "has_sig": false,
+        "md5_digest": "09e5a82e90b45360a97c4715fedeb73b",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 3305923,
+        "upload_time": "2026-09-27T11:44:38",
+        "upload_time_iso_8601": "2026-09-27T11:44:38.076796Z",
+        "url": "https://files.pythonhosted.org/packages/14/5b/86b96c65b31d6d8e7ddc849934bb9e03c94f5164d6d41fa20964c56ee935/lektor_ng-0.0.2b16.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b2": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "b5d4cdde1e3b15c27e4167ff6e73b92435e3967317dcbdb74751cfb67f43cf68"
+        },
+        "digests": {
+          "blake2b_256": "abcf4202a1c4e3baddfd90ade40575b61c200f8db7b9ecf041063d064d25bc2b",
+          "md5": "f31509c0eb9ac06fe091c38d7ea327ff",
+          "sha256": "ba4e13432c6f215ea59306a6748a66fc15140a97d7276f3926f86ca4b8fd9b64"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b2-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "f31509c0eb9ac06fe091c38d7ea327ff",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819198,
+        "upload_time": "2026-08-31T01:23:50",
+        "upload_time_iso_8601": "2026-08-31T01:23:50.141755Z",
+        "url": "https://files.pythonhosted.org/packages/ab/cf/4202a1c4e3baddfd90ade40575b61c200f8db7b9ecf041063d064d25bc2b/lektor_ng-0.0.2b2-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "dc83402880466757c39f37fbbaa89593aec0657b5f29b03be71978a521bfca50",
+          "md5": "5f98da4f3da6adb4101b918fb3e71313",
+          "sha256": "d04d4185ce808251c384c6dbf450f668fce7bc6597aa23ada4c4b09f425eb21c"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b2.tar.gz",
+        "has_sig": false,
+        "md5_digest": "5f98da4f3da6adb4101b918fb3e71313",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2646412,
+        "upload_time": "2026-08-31T01:23:52",
+        "upload_time_iso_8601": "2026-08-31T01:23:52.168215Z",
+        "url": "https://files.pythonhosted.org/packages/dc/83/402880466757c39f37fbbaa89593aec0657b5f29b03be71978a521bfca50/lektor_ng-0.0.2b2.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b3": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "91597cfe8fbdd5d59b3ff379185720ff6b81ff74e5de49b20753cbfbc4f3ba79"
+        },
+        "digests": {
+          "blake2b_256": "70a6aefe512c465a2b782c4f36f0182c7dc5425250109e4558026c20f026975f",
+          "md5": "eb87f028dbc53ff4ff322d883deb9dd5",
+          "sha256": "d5e53b7ce558ec5328119f1198301a21f856c8dec3d5a7842c463fb1d4cfb5ae"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b3-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "eb87f028dbc53ff4ff322d883deb9dd5",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819332,
+        "upload_time": "2026-09-01T11:39:07",
+        "upload_time_iso_8601": "2026-09-01T11:39:07.085873Z",
+        "url": "https://files.pythonhosted.org/packages/70/a6/aefe512c465a2b782c4f36f0182c7dc5425250109e4558026c20f026975f/lektor_ng-0.0.2b3-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "5fc7b8ae5548bf8289523a928218ca38ab67d2a0ea0d462a56e5512909b248ba",
+          "md5": "3d83a78c726c072fbea84ddd528c0fb9",
+          "sha256": "4ce178f8dd610502d5a31508acebf865e4618c1d841806cca8447647f3de6ded"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b3.tar.gz",
+        "has_sig": false,
+        "md5_digest": "3d83a78c726c072fbea84ddd528c0fb9",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2648795,
+        "upload_time": "2026-09-01T11:39:08",
+        "upload_time_iso_8601": "2026-09-01T11:39:08.632823Z",
+        "url": "https://files.pythonhosted.org/packages/5f/c7/b8ae5548bf8289523a928218ca38ab67d2a0ea0d462a56e5512909b248ba/lektor_ng-0.0.2b3.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b4": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "9d09fe34745d238f6f1dbd2860bfb685d9c43e57a246852b69a3ca5835845770"
+        },
+        "digests": {
+          "blake2b_256": "ad93dec1313c67885384ead027281b51d81aadc9bc6de18c60d6b098180c3834",
+          "md5": "0de362abdb30b300a012cd0851a88263",
+          "sha256": "1555c56818186a2d6c90385003fe89e4d952e3089cc7337bc6a31b8ccaaad100"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b4-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "0de362abdb30b300a012cd0851a88263",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819331,
+        "upload_time": "2026-09-03T11:56:57",
+        "upload_time_iso_8601": "2026-09-03T11:56:57.762262Z",
+        "url": "https://files.pythonhosted.org/packages/ad/93/dec1313c67885384ead027281b51d81aadc9bc6de18c60d6b098180c3834/lektor_ng-0.0.2b4-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "67422bb3239c753406cebc646c8353f9e4235edf3dbcc1b77b0650082cb3cab4",
+          "md5": "d974cdeeb713434226a47d83bfe593c4",
+          "sha256": "9ef86caab3d7f2b6b1c3b849754299be83fc48cb78fc05220318f535d3153b30"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b4.tar.gz",
+        "has_sig": false,
+        "md5_digest": "d974cdeeb713434226a47d83bfe593c4",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 2648972,
+        "upload_time": "2026-09-03T11:56:59",
+        "upload_time_iso_8601": "2026-09-03T11:56:59.902202Z",
+        "url": "https://files.pythonhosted.org/packages/67/42/2bb3239c753406cebc646c8353f9e4235edf3dbcc1b77b0650082cb3cab4/lektor_ng-0.0.2b4.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b5": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "459957b776a88b9e03d9f37ef8edc7b744b12fc60bb2defa9da016969f2fa894"
+        },
+        "digests": {
+          "blake2b_256": "07b7b7ae35318c9a9b61eaf285284620dbcd214f85d38d78f9eca010c71bba3d",
+          "md5": "c9c5a472e7de9d11fa81eacf24b64eeb",
+          "sha256": "3821de08c260c1289363d8d226b297b11493118af66bfe0357882e8a8bfa48b4"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b5-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "c9c5a472e7de9d11fa81eacf24b64eeb",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819278,
+        "upload_time": "2026-09-05T10:34:04",
+        "upload_time_iso_8601": "2026-09-05T10:34:04.734816Z",
+        "url": "https://files.pythonhosted.org/packages/07/b7/b7ae35318c9a9b61eaf285284620dbcd214f85d38d78f9eca010c71bba3d/lektor_ng-0.0.2b5-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "0ba3fbd375269a3640efa007c02e623b3f97f30cd33cccaeb76fbd1e0ab3ffb4",
+          "md5": "76b9660764d39b2ce3dc58b88e0b845c",
+          "sha256": "7560961de4786bf124f28d859f781ec5649faa1ce1a509faaf2b85aa0e6073ea"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b5.tar.gz",
+        "has_sig": false,
+        "md5_digest": "76b9660764d39b2ce3dc58b88e0b845c",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 3301975,
+        "upload_time": "2026-09-05T10:34:06",
+        "upload_time_iso_8601": "2026-09-05T10:34:06.335984Z",
+        "url": "https://files.pythonhosted.org/packages/0b/a3/fbd375269a3640efa007c02e623b3f97f30cd33cccaeb76fbd1e0ab3ffb4/lektor_ng-0.0.2b5.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b6": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "78a81c939debc4e149f75edbbae0e965d1036a5aefc0bda2bce5feeb68cf512a"
+        },
+        "digests": {
+          "blake2b_256": "cfb00a9a63c0fb3aa0e927e9e4f715a40830c9774d2fe8dc1d67d62ba3b6ced3",
+          "md5": "8a6f583f0034f172e12688c832654532",
+          "sha256": "1e319e8cad0b4489c1ff475c04d2e2dbd1f1147a5de172e27cd2517406cb2219"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b6-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "8a6f583f0034f172e12688c832654532",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819272,
+        "upload_time": "2026-09-05T14:44:40",
+        "upload_time_iso_8601": "2026-09-05T14:44:40.421102Z",
+        "url": "https://files.pythonhosted.org/packages/cf/b0/0a9a63c0fb3aa0e927e9e4f715a40830c9774d2fe8dc1d67d62ba3b6ced3/lektor_ng-0.0.2b6-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "75494127bf7795cc296d98f332ee64f53e0ad56856adb58706853275835d930e",
+          "md5": "e11051990a78e92b09e68942d9e90371",
+          "sha256": "f92594226909fee6ca22a0774a7deea2d9a1912624d30179b97f262b49948a06"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b6.tar.gz",
+        "has_sig": false,
+        "md5_digest": "e11051990a78e92b09e68942d9e90371",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 3301954,
+        "upload_time": "2026-09-05T14:44:42",
+        "upload_time_iso_8601": "2026-09-05T14:44:42.230228Z",
+        "url": "https://files.pythonhosted.org/packages/75/49/4127bf7795cc296d98f332ee64f53e0ad56856adb58706853275835d930e/lektor_ng-0.0.2b6.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b7": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "eee790a562c343858c3f9182e49f49fe8d2fd5e9ad30138497c3ec704fb09eca"
+        },
+        "digests": {
+          "blake2b_256": "43d4aee061c18c071d939889720572ff5db39efbfa05e5ce0728632ae2e7c09c",
+          "md5": "93c0ec79b822072144c8591f4c64a507",
+          "sha256": "95e4780acb3bfba01c818ebac1a85ee11b70a5b0e274d1763fc230f193590c70"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b7-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "93c0ec79b822072144c8591f4c64a507",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819274,
+        "upload_time": "2026-09-05T14:54:44",
+        "upload_time_iso_8601": "2026-09-05T14:54:44.213790Z",
+        "url": "https://files.pythonhosted.org/packages/43/d4/aee061c18c071d939889720572ff5db39efbfa05e5ce0728632ae2e7c09c/lektor_ng-0.0.2b7-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "bd96ee4a8a0291c093036dbb0c74a5e1fb70e1768cb671226533617afd6846d6",
+          "md5": "59d5e4fe0a2b9b899d3c3fa0876a2a00",
+          "sha256": "8f06a3b3d4b371953e718537a91a294597703d0def8269a871729971558a3f88"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b7.tar.gz",
+        "has_sig": false,
+        "md5_digest": "59d5e4fe0a2b9b899d3c3fa0876a2a00",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 3301653,
+        "upload_time": "2026-09-05T14:54:45",
+        "upload_time_iso_8601": "2026-09-05T14:54:45.722637Z",
+        "url": "https://files.pythonhosted.org/packages/bd/96/ee4a8a0291c093036dbb0c74a5e1fb70e1768cb671226533617afd6846d6/lektor_ng-0.0.2b7.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b8": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "9477da6df12429183ada2bf52b620c414c62c9fb37c8b87774eef11868002396"
+        },
+        "digests": {
+          "blake2b_256": "4d7cc36e3f34df509e180da0111dfd759fb148e1047358928a28b28be5fde786",
+          "md5": "4f5540555f59fdcd3f1da9bb553e85df",
+          "sha256": "6858705539e9cc15a75a75cb997ab3f301ee3d22726e1321350d089049ff1b85"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b8-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "4f5540555f59fdcd3f1da9bb553e85df",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819276,
+        "upload_time": "2026-09-05T14:58:14",
+        "upload_time_iso_8601": "2026-09-05T14:58:14.081888Z",
+        "url": "https://files.pythonhosted.org/packages/4d/7c/c36e3f34df509e180da0111dfd759fb148e1047358928a28b28be5fde786/lektor_ng-0.0.2b8-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "ee01c9b93ffe268ea5f7c387683beaa945892913044b69b441c08869ff783aab",
+          "md5": "3912e75af05a145d107ea91135e16598",
+          "sha256": "a05086a41c2d11de4924a98c12c5c5b12cd09aa2289d09f9229afb6e798b09b6"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b8.tar.gz",
+        "has_sig": false,
+        "md5_digest": "3912e75af05a145d107ea91135e16598",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 3301880,
+        "upload_time": "2026-09-05T14:58:15",
+        "upload_time_iso_8601": "2026-09-05T14:58:15.768573Z",
+        "url": "https://files.pythonhosted.org/packages/ee/01/c9b93ffe268ea5f7c387683beaa945892913044b69b441c08869ff783aab/lektor_ng-0.0.2b8.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.0.2b9": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "b530472f6eae94f4738cd618a21af925d79a807fc7b229592930d5feb4b544ec"
+        },
+        "digests": {
+          "blake2b_256": "c244f7efb030b64d22e49d6682deb801753ecbdec88a71c476bb879916b8dae7",
+          "md5": "46368d33442cee0dd9f70e4e432b2317",
+          "sha256": "74fed22a72462ca1715910745d9485021f10e2d50ff329aea8d013c2aa1834bf"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b9-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "46368d33442cee0dd9f70e4e432b2317",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.11",
+        "size": 819276,
+        "upload_time": "2026-09-05T15:12:23",
+        "upload_time_iso_8601": "2026-09-05T15:12:23.794923Z",
+        "url": "https://files.pythonhosted.org/packages/c2/44/f7efb030b64d22e49d6682deb801753ecbdec88a71c476bb879916b8dae7/lektor_ng-0.0.2b9-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "fdd8a1b79bf062eb058edf65fcb1ef9a4df8dbf67fd156eb172ff92ebc1e7618",
+          "md5": "de985830a4f0963b8df0bd3102500d61",
+          "sha256": "24f0d7d5dfbbf9ae5f5b05f8492883502a79b00982d152271b6beec52061ac98"
+        },
+        "downloads": -1,
+        "filename": "lektor_ng-0.0.2b9.tar.gz",
+        "has_sig": false,
+        "md5_digest": "de985830a4f0963b8df0bd3102500d61",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.11",
+        "size": 3302607,
+        "upload_time": "2026-09-05T15:12:25",
+        "upload_time_iso_8601": "2026-09-05T15:12:25.516630Z",
+        "url": "https://files.pythonhosted.org/packages/fd/d8/a1b79bf062eb058edf65fcb1ef9a4df8dbf67fd156eb172ff92ebc1e7618/lektor_ng-0.0.2b9.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ]
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "64286f1b17e71ac7f7b9e7af668ba744a588165cbaf795d43e5deeb64a07b4c8"
+      },
+      "digests": {
+        "blake2b_256": "f700a85f739eca6f2eabbcd2b0dc6c8a475d58a569eb65e49ea33690229e1cc6",
+        "md5": "a2e83b013130f21dbcab51dc86712242",
+        "sha256": "00fffadf57f68af5235615b81d0511f2d730b72dc43627f1171bca9e0cf247c4"
+      },
+      "downloads": -1,
+      "filename": "lektor_ng-0.0.1-py3-none-any.whl",
+      "has_sig": false,
+      "md5_digest": "a2e83b013130f21dbcab51dc86712242",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.11",
+      "size": 816906,
+      "upload_time": "2026-08-09T00:30:25",
+      "upload_time_iso_8601": "2026-08-09T00:30:25.151628Z",
+      "url": "https://files.pythonhosted.org/packages/f7/00/a85f739eca6f2eabbcd2b0dc6c8a475d58a569eb65e49ea33690229e1cc6/lektor_ng-0.0.1-py3-none-any.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "7dd26ce0c7029d49da060bf0d5c208af2d3ce006729b204804fd70e1d7faf08f",
+        "md5": "025dfa3ce1b83b93bb4650c3dd3b117b",
+        "sha256": "e2871fad94e8ef37488b9de26462ad3333eb9b9bf43584de63c328ad6b5f30b1"
+      },
+      "downloads": -1,
+      "filename": "lektor_ng-0.0.1.tar.gz",
+      "has_sig": false,
+      "md5_digest": "025dfa3ce1b83b93bb4650c3dd3b117b",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": ">=3.11",
+      "size": 2335183,
+      "upload_time": "2026-08-09T00:30:26",
+      "upload_time_iso_8601": "2026-08-09T00:30:26.852374Z",
+      "url": "https://files.pythonhosted.org/packages/7d/d2/6ce0c7029d49da060bf0d5c208af2d3ce006729b204804fd70e1d7faf08f/lektor_ng-0.0.1.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "vulnerabilities": []
+}
