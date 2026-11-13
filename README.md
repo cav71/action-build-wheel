@@ -203,6 +203,15 @@ action-build-wheel/
 - GitHub Actions runner (Linux, macOS, or Windows)
 - Python 3.x (automatically set up by the action)
 
+
+## Tooling
+
+Fetch the GITHUB_DUMP value from the step
+
+```
+uvx --from git+https://github.com/cav71/action-build-wheel builder --help
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
