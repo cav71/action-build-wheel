@@ -34,6 +34,9 @@ dev = [                         # generally useful during development
     "rufF",
 ]
 
+[project.scripts]
+builder = "action_build_wheel_support.builder:main" 
+
 [tool.ruff]
 line-length = 120
 
