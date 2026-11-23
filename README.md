@@ -209,7 +209,8 @@ action-build-wheel/
 Fetch the GITHUB_DUMP value from the step
 
 ```
-uvx --from git+https://github.com/cav71/action-build-wheel builder --help
+uvx --from git+https://github.com/cav71/action-build-wheel builder --gitdump gitdump.json --dump beta
+
 ```
 
 ## License
