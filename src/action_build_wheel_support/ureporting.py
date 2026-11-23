@@ -3,9 +3,10 @@ from __future__ import annotations
 import dataclasses as dc
 import functools
 import sys
+from collections.abc import Sequence
 from enum import IntEnum, auto
 from pathlib import Path
-from typing import Sequence, TextIO
+from typing import TextIO
 
 
 class S(IntEnum):
