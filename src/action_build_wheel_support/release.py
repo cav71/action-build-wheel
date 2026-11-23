@@ -2,27 +2,42 @@
 """make a release"""
 # /// script
 # dependencies = [
-# "acbox",
 # ]
 # ///
 
+import argparse
 import logging
 import re
 import subprocess
 from argparse import Namespace
 from pathlib import Path
 
-import click
-from acbox.click import MainFn, command, options
-
 log = logging.getLogger(__name__)
+RED = "\033[31m"
+GREEN = "\033[32m"
+YELLOW = "\033[33m"
+GREY = "\033[90m"
+RESET = "\033[0m"
 
 
-@options()
-def add_arguments(fn: MainFn) -> MainFn:
-    fn = click.argument("mode", type=click.Choice(["major", "minor", "micro"]))(fn)
-    fn = click.option("--commit", is_flag=True)(fn)
-    return fn
+def indent(txt: str, pre: str, first: str | None = None) -> str:
+    return (pre if first is None else first) + txt.replace("\n", "\n" + pre)
+
+
+def message(title: str, body: str | list[str]) -> str:
+    text = body if isinstance(body, str) else "\n".join(str(b) for b in body)
+    text = indent(text, "|  ")
+    return f"> {YELLOW}{title}{RESET}\n{GREEN}{text}{RESET}"
+
+
+def parse_args() -> Namespace:
+    parser = argparse.ArgumentParser()
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("--commit", action="store_true")
+    group.add_argument("--push", action="store_true")
+    parser.add_argument("mode", choices=["major", "minor", "micro"])
+
+    return parser.parse_args()
 
 
 def raise_if_modified():
@@ -60,7 +75,6 @@ def bump(version: list[int], mode: str) -> list[int]:
     return result
 
 
-@command(options=[add_arguments])
 def main(args: Namespace) -> None:
     raise_if_modified()
 
@@ -82,32 +96,48 @@ def main(args: Namespace) -> None:
         elif ask.upper() in {"", "N", "NO"}:
             return
 
-    def run(arguments: list[str | Path]) -> None:
+    commit = args.commit or args.push
+
+    def run(arguments: list[str | Path], capture: bool = False) -> str | None:
         cmdline = [str(a) for a in arguments]
-        if args.commit:
+        if commit:
             subprocess.check_call(cmdline)
         else:
-            print("dry run:", " ".join(cmdline))
+            print(f"{GREY}dry run:", " ".join(cmdline), RESET)
+
+    # get the current hash
+    current = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True)[:7]
 
     # first tagging the code
     run(["git", "commit", "-m", f"release v{sversion}", "--allow-empty"])
     run(["git", "tag", "-m", "release", f"v{sversion}"])
 
     newline = lineno, f'version = "{snextversion}"'
-    print(f"| changing line @ {lineno}")
-    print(f"|   {lines[lineno][1]}")
-    print(f"|   {newline[1]}")
+    print(
+        message(
+            f"changing line @ {lineno}",
+            [
+                lines[lineno][1],
+                newline[1],
+            ],
+        )
+    )
     lines[lineno] = newline
 
     # updating pyproject
-    if args.commit:
+    if commit:
         pyproject.write_text("\n".join(line[1] for line in lines))
     run(["git", "commit", "-m", f"release bump {sversion} -> {snextversion}", pyproject])
 
     # pushing it out
-    run(["git", "push", "origin", f"v{sversion}"])
-    run(["git", "push", "origin", "HEAD"])
+    if args.push:
+        run(["git", "push", "origin", f"v{sversion}"])
+        run(["git", "push", "origin", "HEAD"])
+
+    if args.commit:
+        print(message("To reverse", [f'git tag -d "v{sversion}"', f"git reset --hard {current[:7]}"]))
+        print(message("To push", [f"git push origin v{sversion}", "git push origin HEAD"]))
 
 
 if __name__ == "__main__":
-    main()
+    main(parse_args())
